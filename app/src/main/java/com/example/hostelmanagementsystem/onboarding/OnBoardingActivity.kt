@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.ActionBar
 import androidx.viewpager2.widget.ViewPager2
+import com.example.hostelmanagementsystem.Data.Prefs
 import com.example.hostelmanagementsystem.R
+import com.example.hostelmanagementsystem.activities.*
 
-import com.example.hostelmanagementsystem.activities.LoginActivity
-import com.example.hostelmanagementsystem.activities.RegisterActivity
 import com.example.hostelmanagementsystem.databinding.ActivityOnBoardingBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -21,6 +21,25 @@ class OnBoardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
+
+        val prefs = Prefs(this)
+        if(prefs.status > 0){
+            when(prefs.userType){
+                "admin" -> {
+                    val intent = Intent(this, AdminActivity::class.java)
+                    startActivity(intent)
+                }
+                "warden" -> {
+                    val intent = Intent(this, WardenActivity::class.java)
+                    startActivity(intent)
+                }
+                "student" -> {
+                    val intent = Intent(this, StudentActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+
+        }
 
         val actionBar: ActionBar? = supportActionBar
         supportActionBar?.hide()

@@ -7,4 +7,7 @@
     <item
         android:id="@+id/studentProfileFragment"
         android:title="@string/profile" />
+    <item
+        android:id="@+id/warden_logout"
+        android:title="@string/logout" />
 </menu>
