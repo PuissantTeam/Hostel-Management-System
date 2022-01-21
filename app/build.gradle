@@ -57,7 +57,6 @@ dependencies {
     // lottie
     implementation 'com.airbnb.android:lottie:4.2.1'
 
-
     // firebase libraries
     implementation 'com.google.firebase:firebase-messaging-ktx:23.0.0'
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
