@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
-        android:id="@+id/studentDashboardFragment"
-        android:title="@string/dashboard"    />
+        android:id="@+id/wardenStudentFragment"
+        android:title="@string/student"    />
     <item
-        android:id="@+id/studentProfileFragment"
-        android:title="@string/profile" />
+        android:id="@+id/wardenAllocationFragment"
+        android:title="@string/allocation" />
     <item
-        android:id="@+id/warden_logout"
-        android:title="@string/logout" />
+        android:id="@+id/wardenViewLeaveFragment"
+        android:title="@string/view_leave" />
+    <item
+        android:id="@+id/wardenViewGrievance"
+        android:title="@string/grievance"/>
+    <item
+        android:id="@+id/wardenGiveNotice"
+        android:title="@string/notice"/>
 </menu>

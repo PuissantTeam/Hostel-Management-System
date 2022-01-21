@@ -75,6 +75,7 @@ class AdminActivity : AppCompatActivity() {
                     FirebaseAuth.getInstance().signOut()
                     val prefs = Prefs(this)
                     prefs.status = 0
+                    prefs.userType= "none"
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
                     finish()

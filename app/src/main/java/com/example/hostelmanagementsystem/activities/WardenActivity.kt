@@ -24,25 +24,28 @@ import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 
 class WardenActivity : AppCompatActivity() {
-    private lateinit var wardenBinding: ActivityWardenBinding
     private lateinit var bottomNav: BottomNavigationView
     private lateinit var navController: NavController
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
+    private lateinit var wardenNavigationView : NavigationView
+    private lateinit var wardenBottomNavigation : BottomNavigationView
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        wardenBinding = ActivityWardenBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_warden)
-        bottomNav = wardenBinding.wardenBottomNavigation
+        wardenBottomNavigation = findViewById(R.id.warden_bottom_navigation)
+        wardenNavigationView = findViewById(R.id.warden_navigation_view)
+        drawerLayout = findViewById(R.id.drawer_layout)
+        bottomNav = wardenBottomNavigation
 
 
         navController = findNavController(R.id.warden_host_fragment)
         setupBottomNavigation()
 
-        navigationView = wardenBinding.wardenNavigationView
-        drawerLayout = wardenBinding.drawerLayout
+        navigationView = wardenNavigationView
+        drawerLayout = drawerLayout
 
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
@@ -61,7 +64,7 @@ class WardenActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.warden_drawer_menu, menu)
+        menuInflater.inflate(R.menu.warden, menu)
         return true
     }
 
@@ -75,6 +78,7 @@ class WardenActivity : AppCompatActivity() {
                     FirebaseAuth.getInstance().signOut()
                     val prefs = Prefs(this)
                     prefs.status = 0
+                    prefs.userType= "none"
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
                     finish()

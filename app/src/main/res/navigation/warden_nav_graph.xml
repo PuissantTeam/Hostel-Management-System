@@ -5,15 +5,30 @@
     android:id="@+id/app_navigation"
     app:startDestination="@id/studentDashboardFragment">
 
-    <fragment
-        android:id="@+id/studentDashboardFragment"
-        android:name="com.example.hostelmanagementsystem.student.fragment.StudentDashboardFragment"
-        android:label="Student Dashboard"
-        tools:layout="@layout/fragment_student_dashboard" />
 
     <fragment
-        android:id="@+id/studentProfileFragment"
-        android:name="com.example.hostelmanagementsystem.student.fragment.StudentProfileFragment"
-        android:label="Student Profile"
-        tools:layout="@layout/fragment_student_profile" />
+        android:id="@+id/viewGrievanceFragment"
+        android:name="com.example.hostelmanagementsystem.warden.ViewGrievanceFragment"
+        android:label="fragment_view_grievance"
+        tools:layout="@layout/fragment_view_grievance" />
+    <fragment
+        android:id="@+id/viewLeaveFragment"
+        android:name="com.example.hostelmanagementsystem.warden.ViewLeaveFragment"
+        android:label="fragment_view_leave"
+        tools:layout="@layout/fragment_view_leave" />
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.example.hostelmanagementsystem.warden.StudentFragment"
+        android:label="fragment_student"
+        tools:layout="@layout/fragment_student" />
+    <fragment
+        android:id="@+id/giveNoticeFragment"
+        android:name="com.example.hostelmanagementsystem.warden.GiveNoticeFragment"
+        android:label="fragment_give_notice"
+        tools:layout="@layout/fragment_give_notice" />
+    <fragment
+        android:id="@+id/allocationFragment"
+        android:name="com.example.hostelmanagementsystem.warden.AllocationFragment"
+        android:label="fragment_allocation"
+        tools:layout="@layout/fragment_allocation" />
 </navigation>
