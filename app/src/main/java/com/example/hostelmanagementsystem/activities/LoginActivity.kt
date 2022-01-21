@@ -9,6 +9,7 @@ import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.ActivityLoginBinding
 import com.example.hostelmanagementsystem.databinding.ActivityRegisterBinding
 import com.example.hostelmanagementsystem.extensions.showSnackBar
+import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -22,21 +23,26 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         binding.signinWithEmailButton.setOnClickListener(View.OnClickListener {
+            hideSoftKeyboard(this)
             val email = binding.emailEditText.text.toString().trim()
             val password= binding.passwordEditText.text.toString().trim()
             if (email.isEmpty()) {
-                binding.emailEditText.error = "Enter email"
+                binding.emailLayoutSignInScreen.error = "Enter email"
                 return@OnClickListener
             }
             if(password.isEmpty()){
-                binding.passwordEditText.error = "Enter Password"
+                binding.passwordLayoutSignInScreen.error = "Enter Password"
                 return@OnClickListener
             }
             val mAuth = FirebaseAuth.getInstance()
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(
                 OnCompleteListener {
 
-                    val user = mAuth.currentUser
+                    val user = FirebaseAuth.getInstance().currentUser
+                    if(user==null){
+                        showSnackBar(this,"Something went wrong, Please try again later!", binding.loginBottom)
+                        return@OnCompleteListener
+                    }
                     FirebaseFirestore.getInstance().collection("User").document(user!!.uid).get().addOnCompleteListener(
                         OnCompleteListener {
                             if(!it.result.exists()){
