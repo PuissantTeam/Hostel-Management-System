@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/drawable/onboarding_selected_dot_blue.xml" value="0.21979166666666666" />
         <entry key="app/src/main/res/drawable/onboarding_viewpager_selector_white.xml" value="0.1921875" />
         <entry key="app/src/main/res/drawable/primary_background.xml" value="0.21979166666666666" />
+        <entry key="app/src/main/res/font/roboto.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/activity_admin.xml" value="0.20364583333333333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.20364583333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20364583333333333" />
@@ -20,7 +21,7 @@
         <entry key="app/src/main/res/layout/activity_student.xml" value="0.16077898550724637" />
         <entry key="app/src/main/res/layout/activity_warden.xml" value="0.20364583333333333" />
         <entry key="app/src/main/res/layout/fragment_onboarding.xml" value="0.20364583333333333" />
-        <entry key="app/src/main/res/layout/fragment_student_profile.xml" value="0.14351851851851852" />
+        <entry key="app/src/main/res/layout/fragment_student_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_warden_profile.xml" value="0.20606884057971014" />
         <entry key="app/src/main/res/layout/layout_rounded_top_white.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/menu/admin_bottom_menu.xml" value="0.20364583333333333" />
