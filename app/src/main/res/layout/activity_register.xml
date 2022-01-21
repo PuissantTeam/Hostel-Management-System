@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="Register"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_layout_register"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_layout_register"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_layout_register"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Email"
+            app:boxStrokeColor="@color/primary_color"
+            app:errorIconDrawable="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/place_layout_register"-->
+        <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@+id/email_layout_register"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginTop="39dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:hint="Place"-->
+        <!--            app:errorIconDrawable="@null">-->
+
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                android:id="@+id/register_place"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:textColor="@color/black" />-->
+
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilVacState"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_layout_register"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1">
+
+            <AutoCompleteTextView
+                android:id="@+id/etVolState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/arrow_drop_down"
+                android:hint="State"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilVacDistrict"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="39dp"
+            android:layout_toEndOf="@id/tilVacState"
+            android:layout_below="@id/email_layout_register"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            app:backgroundTint="#f5f5f5">
+
+            <AutoCompleteTextView
+                android:id="@+id/etVolDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/arrow_drop_down"
+                android:enabled="false"
+                android:hint="District"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ID_layout_register"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tilVacState"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Student ID"
+            app:errorIconDrawable="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_ID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Register_btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ID_layout_register"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/primary_color"
+            android:text="REGISTER"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!--        <RelativeLayout-->
+        <!--            android:id="@+id/divider_layout"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/register_signup_screen"-->
+        <!--            android:layout_centerInParent="true"-->
+        <!--            android:layout_marginTop="30dp">-->
+
+
+        <!--            <View-->
+        <!--                android:id="@+id/right_line"-->
+        <!--                android:layout_width="68dp"-->
+        <!--                android:layout_height="01dp"-->
+        <!--                android:layout_marginStart="74dp"-->
+        <!--                android:layout_marginTop="07dp"-->
+        <!--                android:layout_marginEnd="-12dp"-->
+        <!--                android:background="@drawable/line" />-->
+        <!--        </RelativeLayout>-->
+
+        <!--        <com.royrodriguez.transitionbutton.TransitionButton-->
+        <!--            android:id="@+id/signin_with_email_button_signup_screen"-->
+        <!--            style="@style/desc"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/divider_layout"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginTop="30dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:text="@string/sign_in"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:defaultColor="@color/primary_color"-->
+        <!--            app:loaderColor="@android:color/white" />-->
+
+
+    </RelativeLayout>
+</RelativeLayout>

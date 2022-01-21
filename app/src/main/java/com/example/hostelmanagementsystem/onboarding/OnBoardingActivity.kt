@@ -9,6 +9,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.hostelmanagementsystem.R
 
 import com.example.hostelmanagementsystem.activities.LoginActivity
+import com.example.hostelmanagementsystem.activities.RegisterActivity
 import com.example.hostelmanagementsystem.databinding.ActivityOnBoardingBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -24,11 +25,11 @@ class OnBoardingActivity : AppCompatActivity() {
         val actionBar: ActionBar? = supportActionBar
         supportActionBar?.hide()
 
-//        registerButtonOnBoard = findViewById(R.id.registerButtonOnBoard)
-//        registerButtonOnBoard.setOnClickListener {
-//            val intent = Intent(this, SignUpActivity::class.java)
-//            startActivity(intent)
-//        }
+        registerButtonOnBoard = findViewById(R.id.registerButtonOnBoard)
+        registerButtonOnBoard.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
         loginButtonOnBoard = findViewById(R.id.loginButtonOnBoard)
         loginButtonOnBoard.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
