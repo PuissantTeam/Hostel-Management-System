@@ -26,4 +26,9 @@
     <string name="room_allocated">Room Allocated</string>
     <string name="name">Name</string>
 
+<!--    Register-->
+    <string name="open_email">Open email</string>
+    <string name="register_alert">You have been registered for hostel room allocation. Once your registration is approved and a hostel room is allocated, You will be receiving your password for login.</string>
+    <string name="logout">Logout</string>
+
 </resources>

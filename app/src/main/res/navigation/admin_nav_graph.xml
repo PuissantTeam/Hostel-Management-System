@@ -8,12 +8,12 @@
     <fragment
         android:id="@+id/studentDashboardFragment"
         android:name="com.example.hostelmanagementsystem.student.fragment.StudentDashboardFragment"
-        android:label="Student Dashboard"
+        android:label="Admin Dashboard"
         tools:layout="@layout/fragment_student_dashboard" />
 
     <fragment
         android:id="@+id/studentProfileFragment"
         android:name="com.example.hostelmanagementsystem.student.fragment.StudentProfileFragment"
-        android:label="Student Profile"
+        android:label="Admin Profile"
         tools:layout="@layout/fragment_student_profile" />
 </navigation>

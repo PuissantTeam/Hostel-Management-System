@@ -1,13 +1,19 @@
 package com.example.hostelmanagementsystem.activities
 
+import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.example.hostelmanagementsystem.Data.Prefs
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.ActivityAdminBinding
 import com.example.hostelmanagementsystem.databinding.ActivityStudentBinding
@@ -15,6 +21,7 @@ import com.example.hostelmanagementsystem.databinding.ActivityWardenBinding
 import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class WardenActivity : AppCompatActivity() {
     private lateinit var wardenBinding: ActivityWardenBinding
@@ -51,6 +58,36 @@ class WardenActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         hideSoftKeyboard(this)
         return NavigationUI.navigateUp(navController, appBarConfiguration)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.warden_drawer_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.warden_logout -> {
+                val builder = AlertDialog.Builder(this)
+                builder.setMessage("Are you sure you want to logout?").setPositiveButton(
+                    "Yes"
+                ) { dialogInterface: DialogInterface?, i: Int ->
+                    FirebaseAuth.getInstance().signOut()
+                    val prefs = Prefs(this)
+                    prefs.status = 0
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                    .setNegativeButton(
+                        "No"
+                    ) { dialogInterface: DialogInterface, i: Int -> dialogInterface.cancel() }
+                val alertDialog = builder.create()
+                alertDialog.show()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }
