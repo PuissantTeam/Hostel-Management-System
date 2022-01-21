@@ -1,42 +1,41 @@
 package com.example.hostelmanagementsystem.activities
 
-import android.os.Bundle
-
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.drawerlayout.widget.DrawerLayout
-
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.hostelmanagementsystem.R
+import com.example.hostelmanagementsystem.databinding.ActivityAdminBinding
+import com.example.hostelmanagementsystem.databinding.ActivityStudentBinding
+import com.example.hostelmanagementsystem.databinding.ActivityWardenBinding
 import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
-
-
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView as NavigationView
+import com.google.android.material.navigation.NavigationView
 
-// TODO: hide keyboard when clicked on bottom navigation items,
-//  add endless recycler views at all places
-class MainActivity : AppCompatActivity() {
-
+class WardenActivity : AppCompatActivity() {
+    private lateinit var wardenBinding: ActivityWardenBinding
     private lateinit var bottomNav: BottomNavigationView
     private lateinit var navController: NavController
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
     private lateinit var appBarConfiguration: AppBarConfiguration
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        bottomNav = findViewById(R.id.bottom_navigation)
+        wardenBinding = ActivityWardenBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_warden)
+        bottomNav = wardenBinding.wardenBottomNavigation
 
 
-        navController = findNavController(R.id.hostFragment)
+        navController = findNavController(R.id.warden_host_fragment)
         setupBottomNavigation()
 
-        navigationView = findViewById(R.id.navigation_view)
-        drawerLayout = findViewById(R.id.drawer_layout)
+        navigationView = wardenBinding.wardenNavigationView
+        drawerLayout = wardenBinding.drawerLayout
 
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)

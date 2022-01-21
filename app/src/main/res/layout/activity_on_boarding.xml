@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".onboarding.OnBoardingActivity"
     android:background="@drawable/primary_background">
 
 
@@ -34,6 +34,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="30dp"
             android:background="@android:color/transparent"
+            app:tabBackground="@drawable/onboarding_viewpager_selector_white"
             app:tabGravity="center"
             app:tabIndicatorHeight="0dp" />
 
@@ -43,9 +44,9 @@
     <LinearLayout
         android:id="@+id/layout_info"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/login_background"
+        android:background="@drawable/layout_rounded_top_white"
         android:gravity="center"
         android:orientation="vertical"
         android:weightSum="10">
@@ -55,49 +56,32 @@
             android:id="@+id/loginButtonOnBoard"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="50dp"
-            android:background="@color/primaryColor"
+            android:layout_margin="20dp"
+            android:background="@color/blue_Dark"
             android:text="Login"
             android:textAllCaps="true"
             android:textColor="@color/white" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/RegisterButtonOnBoard"
+            android:id="@+id/registerButtonOnBoard"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="50dp"
-            android:background="@color/primaryColor"
+            android:layout_margin="20dp"
+            android:background="@drawable/background_border"
             android:text="Register"
             android:textAllCaps="true"
-            android:textColor="@color/white" />
+            android:textColor="@color/blue_Dark" />
 
-
-        <!--        <androidx.appcompat.widget.AppCompatButton-->
-        <!--            android:id="@+id/registerButtonOnBoard"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="50dp"-->
-        <!--            android:layout_margin="20dp"-->
-        <!--            android:background="@drawable/background_border"-->
-        <!--            android:text="Register"-->
-        <!--            android:textAllCaps="true"-->
-        <!--            android:textColor="@color/blue_Dark" />-->
-
-        <!--        <androidx.appcompat.widget.AppCompatTextView-->
-        <!--            android:id="@+id/text_policy_terms"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_margin="20dp"-->
-        <!--            android:gravity="center"-->
-        <!--            android:text="@string/start_text_advice"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textColorLink="@color/light_blue"-->
-        <!--            android:textSize="12sp" />-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_policy_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/start_text_advice"
+            android:textColor="@color/black"
+            android:textColorLink="@color/light_blue"
+            android:textSize="12sp" />
 
     </LinearLayout>
 

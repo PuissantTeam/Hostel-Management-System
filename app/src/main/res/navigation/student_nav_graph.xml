@@ -2,18 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/app_navigation"
+    android:id="@+id/student_navigation"
     app:startDestination="@id/studentDashboardFragment">
 
     <fragment
         android:id="@+id/studentDashboardFragment"
-        android:name="com.example.hostelmanagementsystem.fragments.student.StudentDashboardFragment"
+        android:name="com.example.hostelmanagementsystem.student.fragment.StudentDashboardFragment"
         android:label="Student Dashboard"
         tools:layout="@layout/fragment_student_dashboard" />
 
     <fragment
         android:id="@+id/studentProfileFragment"
-        android:name="com.example.hostelmanagementsystem.fragments.student.StudentProfileFragment"
+        android:name="com.example.hostelmanagementsystem.student.fragment.StudentProfileFragment"
         android:label="Student Profile"
         tools:layout="@layout/fragment_student_profile" />
 </navigation>

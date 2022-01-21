@@ -4,17 +4,13 @@ import android.app.Activity
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import androidx.fragment.app.Fragment
-
-import com.google.android.material.snackbar.Snackbar
-import android.content.Intent
-
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
-
-import com.example.hostelmanagementsystem.R
+import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 
 
 fun Fragment.closeKeyboard() {
@@ -32,10 +28,10 @@ fun Context.hideKeyboard(view: View) {
     inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
 }
 
-fun showSnackBar(activity: Activity, message: String?) {
+fun showSnackBar(activity: Activity, message: String?, anchorView: View) {
     val rootView = activity.window.decorView.findViewById<View>(android.R.id.content)
     val snackbar = Snackbar.make(rootView, message!!, Snackbar.LENGTH_SHORT)
-    snackbar.anchorView = activity.findViewById(R.id.bottom_navigation)
+    snackbar.anchorView = anchorView
     snackbar.show()
 }
 
@@ -50,12 +46,13 @@ fun showSnackBarWithAction(
     message: String?,
     @StringRes actionRes: Int,
     color: Int? = null,
+    anchorView: View,
     listener: (View) -> Unit
 ) {
     val rootView = activity.window.decorView.findViewById<View>(android.R.id.content)
     val snackbar = Snackbar.make(rootView, message!!, Snackbar.LENGTH_SHORT)
     snackbar.setAction(actionRes, listener)
-    snackbar.anchorView = activity.findViewById(R.id.bottom_navigation)
+    snackbar.anchorView = anchorView
     snackbar.show()
 }
 
