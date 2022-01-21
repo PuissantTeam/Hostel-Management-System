@@ -21,4 +21,10 @@
     <color name="light_blue">#6FB6F4</color>
     <color name="blue_Dark">#3E97F0</color>
     <color name="md_grey_600">#757575</color>
+
+    <color name="argentinan_blue">#6CB4EE</color>
+    <color name="aqua_marine">#7FFFD4</color>
+    <color name="celestial">#B2FFFF</color>
+    <color name="columbia_blue">#B9D9EB</color>
+
 </resources>

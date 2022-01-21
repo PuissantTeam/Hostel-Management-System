@@ -16,4 +16,10 @@
         android:name="com.example.hostelmanagementsystem.student.fragment.StudentProfileFragment"
         android:label="Student Profile"
         tools:layout="@layout/fragment_student_profile" />
+
+    <fragment
+        android:id="@+id/studentAttendanceFragment"
+        android:name="com.example.hostelmanagementsystem.student.fragment.StudentAttendanceFragment"
+        android:label="Student Attendance"
+        tools:layout="@layout/fragment_student_attendance" />
 </navigation>

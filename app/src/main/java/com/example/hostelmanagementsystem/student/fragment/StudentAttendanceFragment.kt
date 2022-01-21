@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.FragmentStudentAttendanceBinding
+import android.R
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
 
 class StudentAttendanceFragment : Fragment() {
 
@@ -17,6 +20,7 @@ class StudentAttendanceFragment : Fragment() {
     ): View {
         studentAttendanceBinding = FragmentStudentAttendanceBinding.inflate(layoutInflater)
 
+        studentAttendanceBinding.studentName.isSelected = true
         val rootView = studentAttendanceBinding.root
         return rootView
     }

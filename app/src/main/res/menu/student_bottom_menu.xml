@@ -4,6 +4,10 @@
     <item
         android:id="@+id/studentDashboardFragment"
         android:title="@string/dashboard"    />
+
+    <item
+        android:id="@+id/studentAttendanceFragment"
+        android:title="@string/attendance"    />
     <item
         android:id="@+id/studentProfileFragment"
         android:title="@string/profile" />
