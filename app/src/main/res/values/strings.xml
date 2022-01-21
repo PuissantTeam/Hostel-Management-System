@@ -17,5 +17,13 @@
     <string name="description_onboarding_3">Watch any missed lecture at any place any time</string>
     <string name="dashboard">Dashboard</string>
     <string name="profile">profile</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">E-Mail</string>
+    <string name="student_name">Student Name</string>
+    <string name="about">About</string>
+    <string name="attendance">Attendance</string>
+    <string name="student_id">Student ID</string>
+    <string name="room_allocated">Room Allocated</string>
+    <string name="name">Name</string>
 
 </resources>

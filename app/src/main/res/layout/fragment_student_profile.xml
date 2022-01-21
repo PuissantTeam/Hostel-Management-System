@@ -28,7 +28,7 @@
             android:layout_gravity="center|bottom"
             android:fontFamily="@font/roboto"
             android:gravity="center"
-            android:text="Name"
+            android:text="@string/name"
             android:textColor="@color/cario_color_dark"
             android:textStyle="bold"
             app:autoSizeMaxTextSize="18sp"
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
-                    android:text="Room Allocated"
+                    android:text="@string/room_allocated"
                     android:textColor="@color/cario_color_dark" />
             </LinearLayout>
 
@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
-                    android:text="Student ID"
+                    android:text="@string/student_id"
                     android:textColor="@color/cario_color_dark" />
             </LinearLayout>
 
@@ -127,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
-                    android:text="Attendance"
+                    android:text="@string/attendance"
                     android:textColor="@color/cario_color_dark" />
 
             </LinearLayout>
@@ -149,7 +149,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="About"
+                android:text="@string/about"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/cario_color_dark"
                 android:textStyle="bold"
@@ -168,7 +168,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="Student Name"
+                android:text="@string/student_name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/black"
                 app:autoSizeMaxTextSize="18sp"
@@ -185,7 +185,7 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="Full Name"
+                android:text="@string/full_name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/black"
                 app:autoSizeMaxTextSize="18sp"
@@ -203,7 +203,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="E-Mail"
+                android:text="@string/email"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/black"
                 app:autoSizeMaxTextSize="18sp"
