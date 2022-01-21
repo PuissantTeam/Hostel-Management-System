@@ -83,7 +83,7 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/profile_student_id"
+                android:id="@+id/profile_warden_id"
                 style="@style/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -95,14 +95,14 @@
                 android:textColor="@color/cario_color_dark" />
 
             <TextView
-                android:id="@+id/profile_questions_asked_text"
+                android:id="@+id/profile_warden_id_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="Student ID"
+                android:text="Warden ID"
                 android:textColor="@color/cario_color_dark" />
         </LinearLayout>
 
@@ -153,7 +153,7 @@
 
 
             <TextView
-                android:id="@+id/profile_attendance"
+                android:id="@+id/profile_room_requests"
                 style="@style/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -162,7 +162,7 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="69%"
+                android:text="2"
                 android:textColor="@color/cario_color_dark" />
 
             <TextView
@@ -173,7 +173,7 @@
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="Attendance"
+                android:text="Pending Requests"
                 android:textColor="@color/cario_color_dark" />
 
         </LinearLayout>
@@ -214,7 +214,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins"
             android:gravity="center"
-            android:text="Student Name"
+            android:text="Warden Name"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/light_grey"
             app:autoSizeMaxTextSize="18sp"
@@ -223,7 +223,7 @@
             app:autoSizeTextType="uniform" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/profile_student_full_name"
+            android:id="@+id/profile_warden_full_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/profile_user_full_name_text"
@@ -243,7 +243,7 @@
             android:id="@+id/profile_study_year_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/profile_student_full_name"
+            android:layout_below="@id/profile_warden_full_name"
             android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
@@ -258,7 +258,7 @@
             app:autoSizeTextType="uniform" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/profile_student_mail"
+            android:id="@+id/profile_warden_mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/profile_study_year_text"
@@ -267,41 +267,6 @@
             android:fontFamily="@font/poppins"
             android:gravity="center"
             android:text="123@gmail.com"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/black"
-            app:autoSizeMaxTextSize="18sp"
-            app:autoSizeMinTextSize="12sp"
-            app:autoSizeStepGranularity="1sp"
-            app:autoSizeTextType="uniform" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/profile_department_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profile_student_mail"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins"
-            android:gravity="center"
-            android:text="Checked In"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/light_grey"
-            app:autoSizeMaxTextSize="18sp"
-            app:autoSizeMinTextSize="12sp"
-            app:autoSizeStepGranularity="1sp"
-            app:autoSizeTextType="uniform" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/profile_check_in"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profile_department_text"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
-            android:fontFamily="@font/poppins"
-            android:gravity="center"
-            android:text="Yes"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/black"
             app:autoSizeMaxTextSize="18sp"
