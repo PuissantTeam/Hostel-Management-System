@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/primary_background">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout_info"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:overScrollMode="never" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/pageIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_below="@id/viewPager"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@android:color/transparent"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/login_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginButtonOnBoard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/primaryColor"
+            android:text="Login"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/RegisterButtonOnBoard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/primaryColor"
+            android:text="Register"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+
+        <!--        <androidx.appcompat.widget.AppCompatButton-->
+        <!--            android:id="@+id/registerButtonOnBoard"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_margin="20dp"-->
+        <!--            android:background="@drawable/background_border"-->
+        <!--            android:text="Register"-->
+        <!--            android:textAllCaps="true"-->
+        <!--            android:textColor="@color/blue_Dark" />-->
+
+        <!--        <androidx.appcompat.widget.AppCompatTextView-->
+        <!--            android:id="@+id/text_policy_terms"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="20dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="@string/start_text_advice"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textColorLink="@color/light_blue"-->
+        <!--            android:textSize="12sp" />-->
+
+    </LinearLayout>
+
+</RelativeLayout>
