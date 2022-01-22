@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem.admin.fragment
+package com.example.hostelmanagementsystem.studentDetails
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,17 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
+import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hostelmanagementsystem.admin.model.AdminStudent
 import com.example.hostelmanagementsystem.R
-import com.example.hostelmanagementsystem.admin.adapter.StudentFragmentAdapter
+import com.example.hostelmanagementsystem.student.model.Student
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.FirebaseFirestore
 
 
 class StudentListFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: StudentFragmentAdapter
     private lateinit var progressBar: ProgressBar
@@ -36,14 +36,20 @@ class StudentListFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         val query = reference.whereEqualTo("userType", "student")
-        val options = FirestoreRecyclerOptions.Builder<AdminStudent>()
-            .setQuery(query, AdminStudent::class.java).build()
+        val options = FirestoreRecyclerOptions.Builder<Student>()
+            .setQuery(query, Student::class.java).build()
 
         adapter = StudentFragmentAdapter(options)
-
-
-        // Setting the Adapter with the recyclerview
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager = LinearLayoutManager(activity)
         recyclerView.adapter = adapter
+
+        adapter.setOnItemClickListener(object : StudentFragmentAdapter.OnItemClickListener {
+            override fun onItemClick(documentSnapshot: String) {
+                val bundle = bundleOf("id" to documentSnapshot)
+                rootView.findNavController().navigate(R.id.action_studentListFragment_to_studentDetailFragment, bundle)
+            }
+        })
 
         return rootView
     }
