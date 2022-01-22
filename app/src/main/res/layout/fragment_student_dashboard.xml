@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/primary_background"
-    tools:context=".student.fragment.StudentAttendanceFragment">
+    tools:context=".student.fragment.StudentDashboardFragment">
 
     <TextView
         android:id="@+id/student_dashboard"
