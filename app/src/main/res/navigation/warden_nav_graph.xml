@@ -42,11 +42,6 @@
             app:destination="@id/studentDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/giveNoticeFragment"
-        android:name="com.example.hostelmanagementsystem.warden.fragment.GiveNoticeFragment"
-        android:label="GiveNoticeFragment"
-        tools:layout="@layout/fragment_give_notice"/>
-    <fragment
         android:id="@+id/viewLeaveFragment"
         android:name="com.example.hostelmanagementsystem.warden.fragment.ViewLeaveFragment"
         android:label="ViewLeaveFragment"
