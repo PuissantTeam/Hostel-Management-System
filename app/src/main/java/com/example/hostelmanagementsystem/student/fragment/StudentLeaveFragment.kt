@@ -107,11 +107,11 @@ class StudentLeaveFragment : Fragment() {
                         leaveRef.add(leaveModel)
                             .addOnSuccessListener {
                     showSnackBar(requireActivity(), "Your leave application has been sent to the warden",binding.fakeAnchorLayout)
-                    view.findNavController().navigate(R.id.studentDashboardFragment)
+                    view.findNavController().navigate(R.id.studentDashboard)
                             }
                             .addOnFailureListener {
                                 showSnackBar(requireActivity(), "Internal error occured",binding.fakeAnchorLayout)
-                                view.findNavController().navigate(R.id.studentDashboardFragment)
+                                view.findNavController().navigate(R.id.studentDashboard)
                             }
                     }
                 })

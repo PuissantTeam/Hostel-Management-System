@@ -9,12 +9,11 @@
     <fragment
         android:id="@+id/viewGrievanceFragment"
         android:name="com.example.hostelmanagementsystem.warden.ViewGrievanceFragment"
-        android:label="fragment_view_grievance"
+        android:label="Student Grievance"
         tools:layout="@layout/fragment_view_grievance" />
     <fragment
         android:id="@+id/viewLeaveFragment"
         android:name="com.example.hostelmanagementsystem.warden.fragment.ViewLeaveFragment"
-        android:label="fragment_view_leave"
         tools:layout="@layout/fragment_view_leave" />
     <fragment
         android:id="@+id/studentFragment"
@@ -24,11 +23,14 @@
     <fragment
         android:id="@+id/giveNoticeFragment"
         android:name="com.example.hostelmanagementsystem.warden.GiveNoticeFragment"
-        android:label="fragment_give_notice"
         tools:layout="@layout/fragment_give_notice" />
     <fragment
         android:id="@+id/allocationFragment"
         android:name="com.example.hostelmanagementsystem.warden.fragment.AllocationFragment"
-        android:label="fragment_allocation"
         tools:layout="@layout/fragment_allocation" />
+    <fragment
+        android:id="@+id/adminNoticeFragment2"
+        android:name="com.example.hostelmanagementsystem.admin.fragment.AdminNoticeFragment"
+        android:label="Send Notice"
+        tools:layout="@layout/fragment_admin_notice" />
 </navigation>

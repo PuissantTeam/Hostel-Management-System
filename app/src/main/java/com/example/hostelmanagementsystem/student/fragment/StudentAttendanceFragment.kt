@@ -268,7 +268,7 @@ class StudentAttendanceFragment : Fragment(), PermissionListener {
             .setNegativeButton("Cancel") { dialog, id ->
                 dialog.cancel()
                 showSnackBar(requireActivity(), "Attendance requires Location Access", anchorView)
-                findNavController().navigate(R.id.studentDashboardFragment)
+                findNavController().navigate(R.id.studentDashboard)
             }
 
         val alert = dialogBuilder.create()
@@ -287,7 +287,7 @@ class StudentAttendanceFragment : Fragment(), PermissionListener {
         } else {
             prefs.locationPermission = false
             showSnackBar(requireActivity(), "Attendance requires Location Access", anchorView)
-            findNavController().navigate(R.id.studentDashboardFragment)
+            findNavController().navigate(R.id.studentDashboard)
         }
     }
 
