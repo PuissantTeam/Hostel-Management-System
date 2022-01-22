@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.example.hostelmanagementsystem.data.LeaveModel
+import androidx.navigation.findNavController
+import com.example.hostelmanagementsystem.R
+import com.example.hostelmanagementsystem.student.model.LeaveModel
 import com.example.hostelmanagementsystem.databinding.FragmentStudentLeaveBinding
+import com.example.hostelmanagementsystem.extensions.showSnackBar
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.CollectionReference
@@ -80,20 +82,20 @@ class StudentLeaveFragment : Fragment() {
         val startDate: String = binding.startdateLeave.text.toString()
         val endDate: String = binding.enddateLeave.text.toString()
         val reason: String = binding.reasonStudentLeave.text.toString()
-        if(reason.isEmpty()){
-            binding.reasonStudentLeave.error = "Enter a reason"
-            return
-        }
-        if(startDate.isEmpty()){
-            binding.startdateStudentLeave.error = "Enter the start date"
-            return
-        }
-        if(endDate.isEmpty()){
-            binding.enddateLeave.error= "Enter the end date"
-            return
-        }
+//        if(reason.isEmpty()){
+//            binding.reasonStudentLeave.error = "Enter a reason"
+//            return
+//        }
+//        if(startDate.isEmpty()){
+//            binding.startdateStudentLeave.error = "Enter the start date"
+//            return
+//        }
+//        if(endDate.isEmpty()){
+//            binding.enddateLeave.error= "Enter the end date"
+//            return
+//        }
         val user = FirebaseAuth.getInstance().currentUser
-        if (user != null) {
+        if (user != null && startDate.isNotEmpty() && endDate.isNotEmpty() && reason.isNotEmpty()) {
             FirebaseFirestore.getInstance().collection("User").document(user.uid).get()
                 .addOnCompleteListener(OnCompleteListener {
                     val result = it.result
@@ -104,17 +106,21 @@ class StudentLeaveFragment : Fragment() {
                         val leaveModel = LeaveModel(startDate, endDate, reason, status, name, sid, roomNo)
                         leaveRef.add(leaveModel)
                             .addOnSuccessListener {
-//                    showSnackBar(requireActivity(), "Thanks you for giving us a feedback")
-//                    view.findNavController().navigate(R.id.)
-                                Toast.makeText(context, "Successful", Toast.LENGTH_SHORT).show()
+                    showSnackBar(requireActivity(), "Your leave application has been sent to the warden",binding.fakeAnchorLayout)
+                    view.findNavController().navigate(R.id.studentDashboardFragment)
                             }
                             .addOnFailureListener {
-                                Toast.makeText(context, "something wrong", Toast.LENGTH_SHORT).show()
+                                showSnackBar(requireActivity(), "Internal error occured",binding.fakeAnchorLayout)
+                                view.findNavController().navigate(R.id.studentDashboardFragment)
                             }
                     }
                 })
 
         }
+        else{
+            showSnackBar(requireActivity(),"Please fill all the fields",binding.fakeAnchorLayout)
+        }
+
 
 
 

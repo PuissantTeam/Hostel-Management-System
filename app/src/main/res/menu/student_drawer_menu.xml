@@ -11,6 +11,9 @@
         android:id="@+id/studentLeaveFragment"
         android:title="@string/leave" />
     <item
+        android:id="@+id/studentGrievanceFragment"
+        android:title="@string/grievance" />
+    <item
         android:id="@+id/student_logout"
         android:title="@string/logout" />
 </menu>
