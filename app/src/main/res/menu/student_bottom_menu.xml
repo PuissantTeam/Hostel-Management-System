@@ -3,7 +3,6 @@
 
     <item
         android:id="@+id/studentDashboardFragment"
-
         android:icon="@drawable/dashboard_image"
         android:title="@string/dashboard" />
 
