@@ -9,22 +9,17 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Toast
-import androidx.navigation.findNavController
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.hostelmanagementsystem.Data.*
+import com.example.hostelmanagementsystem.data.*
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.ActivityRegisterBinding
 import com.example.hostelmanagementsystem.extensions.showSnackBar
-import com.example.hostelmanagementsystem.extensions.showSnackBarWithAction
 import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
 import com.example.hostelmanagementsystem.utils.Constants
-import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 import com.google.gson.Gson
 
 class RegisterActivity : AppCompatActivity() {

@@ -13,11 +13,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
-import com.example.hostelmanagementsystem.Data.Prefs
+import com.example.hostelmanagementsystem.data.Prefs
 import com.example.hostelmanagementsystem.R
-import com.example.hostelmanagementsystem.databinding.ActivityAdminBinding
-import com.example.hostelmanagementsystem.databinding.ActivityStudentBinding
-import com.example.hostelmanagementsystem.databinding.ActivityWardenBinding
 import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
 import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.material.bottomnavigation.BottomNavigationView

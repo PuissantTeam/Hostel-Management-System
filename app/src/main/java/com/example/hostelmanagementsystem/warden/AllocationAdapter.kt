@@ -7,22 +7,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hostelmanagementsystem.Data.Register
-import com.example.hostelmanagementsystem.Data.Room
-import com.example.hostelmanagementsystem.Data.Student
+import com.example.hostelmanagementsystem.data.Register
+import com.example.hostelmanagementsystem.data.Room
+import com.example.hostelmanagementsystem.data.Student
 import com.example.hostelmanagementsystem.R
-import com.example.hostelmanagementsystem.extensions.showSnackBar
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.OnSuccessListener
-import com.google.android.gms.tasks.Task
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
-import org.w3c.dom.Text
 
 class AllocationAdapter(options: FirestoreRecyclerOptions<Register>) :
     FirestoreRecyclerAdapter<Register, AllocationAdapter.AllocationHolder>(options) {

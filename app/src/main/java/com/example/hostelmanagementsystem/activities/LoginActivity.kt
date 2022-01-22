@@ -5,16 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.example.hostelmanagementsystem.Data.Prefs
-import com.example.hostelmanagementsystem.R
+import com.example.hostelmanagementsystem.data.Prefs
 import com.example.hostelmanagementsystem.databinding.ActivityLoginBinding
-import com.example.hostelmanagementsystem.databinding.ActivityRegisterBinding
 import com.example.hostelmanagementsystem.extensions.showSnackBar
-import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding

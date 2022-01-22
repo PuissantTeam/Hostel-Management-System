@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem.Data
+package com.example.hostelmanagementsystem.data
 
 data class Student(
     var userType: String = "student",
