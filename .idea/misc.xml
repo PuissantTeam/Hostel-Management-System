@@ -6,12 +6,42 @@
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/drawable/arrow_drop_down.xml" value="0.2484375" />
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/drawable/login_background.xml" value="0.2484375" />
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/drawable/primary_background.xml" value="0.2484375" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/drawable/warden_1.xml" value="0.2484375" />
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/activity_login.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/activity_on_boarding.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/activity_onboard.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/activity_onboarding.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/activity_register.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/activity_sample.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/activity_student.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/activity_student_leave.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/admin_item_student.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/admin_item_warden.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/dropdown_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_admin_dashboard.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_admin_notice.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_onboarding.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_admin.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_attendance.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_dashboard.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_grievance.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_leave.xml" value="0.2" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_profile.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_view_grievance.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_view_leave.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_warden_admin.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_warden_list.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_warden_profile.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/leave_grievance_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/leave_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/student_announcement_recycler_view_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/student_attendance_recycler_view_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/student_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/menu/admin_drawer_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/menu/student_bottom_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/menu/student_drawer_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/menu/warden_bottom_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/menu/warden_drawer_menu.xml" value="0.23229166666666667" />
         <entry key="app/src/main/res/drawable/background_border.xml" value="0.1921875" />
         <entry key="app/src/main/res/drawable/btn_blue_normal.xml" value="0.1921875" />
         <entry key="app/src/main/res/drawable/grievance_image.xml" value="0.16574074074074074" />

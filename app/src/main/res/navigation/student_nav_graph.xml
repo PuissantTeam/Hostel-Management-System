@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/student_navigation"
-    app:startDestination="@id/studentDashboardFragment">
+    android:label="Send Grievance"
+    app:startDestination="@id/studentDashboard">
 
     <fragment
-        android:id="@+id/studentDashboardFragment"
+        android:id="@+id/studentDashboard"
         android:name="com.example.hostelmanagementsystem.student.fragment.StudentDashboardFragment"
-        android:label="Student Dashboard"
+        android:label="Announcements"
         tools:layout="@layout/fragment_student_dashboard" />
 
     <fragment
@@ -27,11 +28,10 @@
         android:id="@+id/studentLeaveFragment"
         android:name="com.example.hostelmanagementsystem.student.fragment.StudentLeaveFragment"
         android:label="Student Leave" />
-  
+
     <fragment
         android:id="@+id/studentGrievanceFragment"
         android:name="com.example.hostelmanagementsystem.student.fragment.StudentGrievanceFragment"
-        android:label="fragment_student_grievance"
         tools:layout="@layout/fragment_student_grievance" />
-  
+
 </navigation>

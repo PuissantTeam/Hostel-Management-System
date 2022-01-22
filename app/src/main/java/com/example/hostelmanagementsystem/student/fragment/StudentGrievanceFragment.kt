@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.FragmentStudentGrievanceBinding
-import com.example.hostelmanagementsystem.student.model.LeaveModel
 import com.example.hostelmanagementsystem.extensions.showSnackBar
 import com.example.hostelmanagementsystem.student.model.GrievanceModel
 import com.google.android.gms.tasks.OnCompleteListener
@@ -55,11 +54,11 @@ class StudentGrievanceFragment : Fragment() {
                         grievRef.add(grievanceModel)
                             .addOnSuccessListener {
                                 showSnackBar(requireActivity(), "Your Grievance has been sent to the warden",binding.fakeAnchorLayout)
-                                view.findNavController().navigate(R.id.studentDashboardFragment)
+                                view.findNavController().navigate(R.id.studentDashboard)
                             }
                             .addOnFailureListener {
                                 showSnackBar(requireActivity(), "Internal error occured",binding.fakeAnchorLayout)
-                                view.findNavController().navigate(R.id.studentDashboardFragment)
+                                view.findNavController().navigate(R.id.studentDashboard)
                             }
                     }
                 })

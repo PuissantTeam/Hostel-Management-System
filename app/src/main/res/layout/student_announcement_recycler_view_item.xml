@@ -13,14 +13,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="100dp">
 
         <TextView
             android:id="@+id/announcement_sender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10sp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/round_background"
             android:backgroundTint="@color/primary_color"
@@ -30,18 +30,25 @@
 
         <TextView
             android:id="@+id/announcements_title"
-            android:layout_width="wrap_content"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="16dp"
             android:layout_toEndOf="@id/announcement_sender"
-            android:gravity="center"
-            android:marqueeRepeatLimit="marquee_forever"
+
             android:padding="10dp"
-            android:singleLine="true"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            tools:text="AnnouncementasdsadsadsadsadsadsaaASD asd asd asd asdas" />
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/announcements_date"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/announcements_title"
+            android:layout_marginStart="235dp"
+            android:layout_marginBottom="10dp" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -47,15 +47,19 @@
         android:label="GiveNoticeFragment"
         tools:layout="@layout/fragment_give_notice"/>
     <fragment
-        android:id="@+id/viewLeaveFragment3"
+        android:id="@+id/viewLeaveFragment"
         android:name="com.example.hostelmanagementsystem.warden.fragment.ViewLeaveFragment"
         android:label="ViewLeaveFragment"
         tools:layout="@layout/fragment_view_leave"/>
     <fragment
-        android:id="@+id/viewGrievanceFragment3"
+        android:id="@+id/viewGrievanceFragment"
         android:name="com.example.hostelmanagementsystem.warden.fragment.ViewGrievanceFragment"
         android:label="ViewGrievanceFragment"
         tools:layout="@layout/fragment_view_grievance" />
-
-
+    <fragment
+        android:id="@+id/adminNoticeFragment"
+        android:name="com.example.hostelmanagementsystem.admin.fragment.AdminNoticeFragment"
+        android:label="Send Notice"
+        tools:layout="@layout/fragment_admin_notice" />
+    
 </navigation>
