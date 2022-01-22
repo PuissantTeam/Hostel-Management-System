@@ -7,16 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import com.example.hostelmanagementsystem.Data.LeaveModel
-import com.example.hostelmanagementsystem.R
+import com.example.hostelmanagementsystem.data.LeaveModel
 import com.example.hostelmanagementsystem.databinding.FragmentStudentLeaveBinding
-import com.example.hostelmanagementsystem.extensions.showSnackBar
-import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
-import java.io.Console
 import java.text.SimpleDateFormat
 import java.util.*
 

@@ -5,15 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.example.hostelmanagementsystem.Data.Prefs
-import com.example.hostelmanagementsystem.R
+import com.example.hostelmanagementsystem.data.Prefs
 import com.example.hostelmanagementsystem.databinding.ActivityLoginBinding
-import com.example.hostelmanagementsystem.databinding.ActivityRegisterBinding
 import com.example.hostelmanagementsystem.extensions.showSnackBar
+import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
@@ -23,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         binding.signinWithEmailButton.setOnClickListener(View.OnClickListener {
+            hideSoftKeyboard(this)
             val email = binding.emailEditText.text.toString().trim()
             val password = binding.passwordEditText.text.toString().trim()
             if (email.isEmpty()) {
@@ -38,6 +37,9 @@ class LoginActivity : AppCompatActivity() {
                 OnCompleteListener {
                     if (it.isSuccessful) {
                         val user = FirebaseAuth.getInstance().currentUser
+                        if(user == null)
+                            showSnackBar(this,"Something went wrong", binding.loginBottom)
+
                         FirebaseFirestore.getInstance().collection("User").document(user!!.uid)
                             .get().addOnCompleteListener(
                                 OnCompleteListener {
@@ -75,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
                         showSnackBar(this, "Something went wrong", binding.loginBottom)
                     }
                 }).addOnFailureListener {
-                showSnackBar(this, it.toString(), view)
+                showSnackBar(this, it.message, binding.loginBottom)
                 Log.d("test", it.toString())
             }
         })

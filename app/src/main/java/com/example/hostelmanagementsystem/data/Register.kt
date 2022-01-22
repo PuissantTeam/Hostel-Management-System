@@ -1,11 +1,11 @@
-package com.example.hostelmanagementsystem.Data
+package com.example.hostelmanagementsystem.data
 
-data class Student(
-    var userType: String = "student",
+data class Register(
     var name: String = "",
     var sid: String = "",
     var email: String = "",
     var state: String= "",
     var district: String= "",
-    var roomNo: String = ""
+    var distance: Int = 0,
+    var status: String = ""
 )
