@@ -13,7 +13,7 @@
         tools:layout="@layout/fragment_view_grievance" />
     <fragment
         android:id="@+id/viewLeaveFragment"
-        android:name="com.example.hostelmanagementsystem.warden.ViewLeaveFragment"
+        android:name="com.example.hostelmanagementsystem.warden.fragment.ViewLeaveFragment"
         android:label="fragment_view_leave"
         tools:layout="@layout/fragment_view_leave" />
     <fragment
@@ -28,7 +28,7 @@
         tools:layout="@layout/fragment_give_notice" />
     <fragment
         android:id="@+id/allocationFragment"
-        android:name="com.example.hostelmanagementsystem.warden.AllocationFragment"
+        android:name="com.example.hostelmanagementsystem.warden.fragment.AllocationFragment"
         android:label="fragment_allocation"
         tools:layout="@layout/fragment_allocation" />
 </navigation>

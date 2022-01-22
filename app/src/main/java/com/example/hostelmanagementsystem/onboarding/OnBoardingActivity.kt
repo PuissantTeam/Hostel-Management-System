@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.ActionBar
 import androidx.viewpager2.widget.ViewPager2
-import com.example.hostelmanagementsystem.data.Prefs
+import com.example.hostelmanagementsystem.common.data.Prefs
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.activities.*
 

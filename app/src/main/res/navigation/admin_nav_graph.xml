@@ -6,17 +6,17 @@
     app:startDestination="@id/adminDashboardFragment">
     <fragment
         android:id="@+id/adminDashboardFragment"
-        android:name="com.example.hostelmanagementsystem.admin.AdminDashboardFragment"
+        android:name="com.example.hostelmanagementsystem.admin.fragment.AdminDashboardFragment"
         android:label="Warden Dashboard"
         tools:layout="@layout/fragment_admin_dashboard" />
     <fragment
         android:id="@+id/studentListFragment"
-        android:name="com.example.hostelmanagementsystem.admin.StudentListFragment"
+        android:name="com.example.hostelmanagementsystem.admin.fragment.StudentListFragment"
         android:label="Students"
         tools:layout="@layout/fragment_student_admin" />
     <fragment
         android:id="@+id/wardenListFragment"
-        android:name="com.example.hostelmanagementsystem.admin.WardenListFragment"
+        android:name="com.example.hostelmanagementsystem.admin.fragment.WardenListFragment"
         android:label="Warden"
         tools:layout="@layout/fragment_warden_admin" />
 </navigation>

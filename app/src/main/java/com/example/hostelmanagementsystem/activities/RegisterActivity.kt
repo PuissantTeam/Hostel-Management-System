@@ -12,10 +12,11 @@ import android.widget.Toast
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.hostelmanagementsystem.data.*
+import com.example.hostelmanagementsystem.common.data.*
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.ActivityRegisterBinding
 import com.example.hostelmanagementsystem.extensions.showSnackBar
+import com.example.hostelmanagementsystem.common.model.Register
 import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
 import com.example.hostelmanagementsystem.utils.Constants
 import com.google.firebase.auth.FirebaseAuth

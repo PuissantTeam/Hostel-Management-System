@@ -20,7 +20,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hostelmanagementsystem.R
-import com.example.hostelmanagementsystem.data.Prefs
+import com.example.hostelmanagementsystem.common.data.Prefs
 import com.example.hostelmanagementsystem.databinding.FragmentStudentAttendanceBinding
 import com.example.hostelmanagementsystem.extensions.closeKeyboard
 import com.example.hostelmanagementsystem.extensions.showSnackBar

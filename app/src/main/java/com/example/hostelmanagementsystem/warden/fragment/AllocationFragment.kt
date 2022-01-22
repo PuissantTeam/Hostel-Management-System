@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem.warden
+package com.example.hostelmanagementsystem.warden.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.hostelmanagementsystem.data.Register
+import com.example.hostelmanagementsystem.common.model.Register
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.FragmentAllocationBinding
 import com.example.hostelmanagementsystem.extensions.closeKeyboard
 import com.example.hostelmanagementsystem.extensions.showSnackBar
+import com.example.hostelmanagementsystem.warden.adapter.AllocationAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.firestore.FirebaseFirestore

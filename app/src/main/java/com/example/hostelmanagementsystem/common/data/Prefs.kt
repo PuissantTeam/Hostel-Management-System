@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem.data
+package com.example.hostelmanagementsystem.common.data
 
 import android.content.Context
 import android.content.SharedPreferences

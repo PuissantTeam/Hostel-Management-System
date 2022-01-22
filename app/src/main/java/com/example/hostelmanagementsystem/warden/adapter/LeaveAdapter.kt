@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem.warden
+package com.example.hostelmanagementsystem.warden.adapter
 
 import android.view.LayoutInflater
 import android.view.View

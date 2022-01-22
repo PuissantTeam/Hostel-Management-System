@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem.data
+package com.example.hostelmanagementsystem.common.data
 
 data class DistrictItems(
     val district_id: Int?,

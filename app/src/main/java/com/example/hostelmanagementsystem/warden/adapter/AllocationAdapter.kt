@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem.warden
+package com.example.hostelmanagementsystem.warden.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hostelmanagementsystem.data.Register
-import com.example.hostelmanagementsystem.data.Room
-import com.example.hostelmanagementsystem.data.Student
+import com.example.hostelmanagementsystem.common.model.Register
+import com.example.hostelmanagementsystem.common.model.Room
+import com.example.hostelmanagementsystem.student.model.Student
 import com.example.hostelmanagementsystem.R
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions

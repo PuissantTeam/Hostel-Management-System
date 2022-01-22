@@ -1,11 +1,11 @@
-package com.example.hostelmanagementsystem.admin
+package com.example.hostelmanagementsystem.admin.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hostelmanagementsystem.data.AdminStudent
+import com.example.hostelmanagementsystem.admin.model.AdminStudent
 import com.example.hostelmanagementsystem.R
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions

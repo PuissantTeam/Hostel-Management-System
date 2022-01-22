@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem.warden
+package com.example.hostelmanagementsystem.warden.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.student.model.LeaveModel
 import com.example.hostelmanagementsystem.databinding.FragmentViewLeaveBinding
+import com.example.hostelmanagementsystem.warden.adapter.LeaveAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.FirebaseFirestore
 

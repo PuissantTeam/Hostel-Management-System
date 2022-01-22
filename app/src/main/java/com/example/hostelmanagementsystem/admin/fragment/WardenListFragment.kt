@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem.admin
+package com.example.hostelmanagementsystem.admin.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,16 +8,16 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hostelmanagementsystem.data.AdminStudent
 import com.example.hostelmanagementsystem.R
+import com.example.hostelmanagementsystem.admin.adapter.WardenFragmentAdapter
+import com.example.hostelmanagementsystem.admin.model.AdminWarden
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.FirebaseFirestore
 
 
-class StudentListFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+class WardenListFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: StudentFragmentAdapter
+    private lateinit var adapter: WardenFragmentAdapter
     private lateinit var progressBar: ProgressBar
     private val reference = FirebaseFirestore.getInstance().collection("User")
 
@@ -26,19 +26,18 @@ class StudentListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val rootView = inflater.inflate(R.layout.fragment_student_admin, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_warden_admin, container, false)
 
-
-        recyclerView = rootView.findViewById(R.id.student_admin_recycler)
-        progressBar = rootView.findViewById(R.id.progress_bar_student_admin)
+       recyclerView = rootView.findViewById(R.id.warden_admin_recycler)
+        progressBar = rootView.findViewById(R.id.progress_bar_warden_admin)
 
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        val query = reference.whereEqualTo("userType", "student")
-        val options = FirestoreRecyclerOptions.Builder<AdminStudent>()
-            .setQuery(query, AdminStudent::class.java).build()
+        val query = reference.whereEqualTo("userType", "warden")
+        val options = FirestoreRecyclerOptions.Builder<AdminWarden>()
+            .setQuery(query, AdminWarden::class.java).build()
 
-        adapter = StudentFragmentAdapter(options)
+        adapter = WardenFragmentAdapter(options)
 
 
         // Setting the Adapter with the recyclerview
@@ -55,5 +54,6 @@ class StudentListFragment : Fragment() {
         super.onStop()
         adapter.stopListening()
     }
+
 
 }

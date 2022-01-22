@@ -1,4 +1,4 @@
-package com.example.hostelmanagementsystem.data
+package com.example.hostelmanagementsystem.common.model
 
 data class Register(
     var name: String = "",

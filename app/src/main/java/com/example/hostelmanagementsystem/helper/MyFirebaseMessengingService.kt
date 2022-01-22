@@ -18,7 +18,7 @@ import com.google.firebase.messaging.RemoteMessage
 
 class MyFirebaseMessagingService:FirebaseMessagingService() {
     private val TAG = "LOOK"
-    private var NOTIFICATION_CHANNEL_ID = "com.example.gdsc_hackathon"
+    private var NOTIFICATION_CHANNEL_ID = "com.example.hostelmanagementsystem"
     private val NOTIFICATION_ID = 100
 
 
