@@ -168,9 +168,11 @@
             android:textStyle="bold" />
 
     </RelativeLayout>
+  
     <RelativeLayout
         android:id="@+id/fake_anchor_layout"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_alignParentBottom="true"/>
+  
 </RelativeLayout>

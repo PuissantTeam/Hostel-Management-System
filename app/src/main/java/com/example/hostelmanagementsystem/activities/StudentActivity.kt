@@ -17,6 +17,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.hostelmanagementsystem.data.Prefs
 import com.example.hostelmanagementsystem.R
+import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
 import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 
 
@@ -75,7 +76,7 @@ class StudentActivity : AppCompatActivity() {
                     val prefs = Prefs(this)
                     prefs.status = 0
                     prefs.userType = "none"
-                    val intent = Intent(this, LoginActivity::class.java)
+                    val intent = Intent(this, OnBoardingActivity::class.java)
                     startActivity(intent)
                     finish()
                 }

@@ -20,6 +20,11 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
+        binding.register.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        })
         binding.signinWithEmailButton.setOnClickListener(View.OnClickListener {
             hideSoftKeyboard(this)
             val email = binding.emailEditText.text.toString().trim()

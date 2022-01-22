@@ -15,6 +15,8 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.hostelmanagementsystem.data.Prefs
 import com.example.hostelmanagementsystem.R
+import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
+
 import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
@@ -25,24 +27,17 @@ class WardenActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
-    private lateinit var wardenNavigationView : NavigationView
-    private lateinit var wardenBottomNavigation : BottomNavigationView
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_warden)
-        wardenBottomNavigation = findViewById(R.id.warden_bottom_navigation)
-        wardenNavigationView = findViewById(R.id.warden_navigation_view)
+        bottomNav = findViewById(R.id.warden_bottom_navigation)
+        navigationView = findViewById(R.id.warden_navigation_view)
         drawerLayout = findViewById(R.id.drawer_layout)
-        bottomNav = wardenBottomNavigation
-
 
         navController = findNavController(R.id.warden_host_fragment)
         setupBottomNavigation()
-
-        navigationView = wardenNavigationView
-        drawerLayout = drawerLayout
 
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
@@ -76,7 +71,7 @@ class WardenActivity : AppCompatActivity() {
                     val prefs = Prefs(this)
                     prefs.status = 0
                     prefs.userType= "none"
-                    val intent = Intent(this, LoginActivity::class.java)
+                    val intent = Intent(this, OnBoardingActivity::class.java)
                     startActivity(intent)
                     finish()
                 }

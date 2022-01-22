@@ -9,7 +9,6 @@ class Prefs (context: Context) {
 
     private val preferences: SharedPreferences = context.getSharedPreferences("data", Context.MODE_PRIVATE)
 
-
     var status : Int
         get() = preferences.getInt("status", -1)
         set(value) = preferences.edit().putInt("status", value).apply()
@@ -17,6 +16,7 @@ class Prefs (context: Context) {
     var userType: String?
         get() = preferences.getString("userType", "none")
         set(value) = preferences.edit().putString("userType", value).apply()
+
 
     var lastVisitedDateTime: Int
         get() = preferences.getInt("lastVisitedDateTime", getPreviousDate())
@@ -29,5 +29,4 @@ class Prefs (context: Context) {
         val dayFormat = SimpleDateFormat("dd",Locale("In"))
         return dayFormat.format(cal.time).toString().toInt()
     }
-
 }

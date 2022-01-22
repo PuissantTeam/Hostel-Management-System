@@ -2,6 +2,7 @@ package com.example.hostelmanagementsystem.data
 
 data class Register(
     var name: String = "",
+    var uid: String = "",
     var sid: String = "",
     var email: String = "",
     var state: String= "",

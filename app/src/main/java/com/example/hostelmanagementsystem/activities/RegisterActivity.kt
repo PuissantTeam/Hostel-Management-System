@@ -18,6 +18,7 @@ import com.example.hostelmanagementsystem.databinding.ActivityRegisterBinding
 import com.example.hostelmanagementsystem.extensions.showSnackBar
 import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
 import com.example.hostelmanagementsystem.utils.Constants
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
 
@@ -105,6 +106,10 @@ class RegisterActivity : AppCompatActivity() {
             binding.IDLayoutRegister.error = "Enter Student Id"
             return
         }
+        if (sid.length < 8) {
+            binding.IDLayoutRegister.error = "Invalid, Enter proper 8 digit sid"
+            return
+        }
         if (state.isEmpty()) {
             showSnackBar(this, "Select State", view)
             return
@@ -114,25 +119,54 @@ class RegisterActivity : AppCompatActivity() {
             return
         }
         val distance = statesMap.get(state)
-        val user = Register(name, sid, email, state, district, distance!!.toInt(), "pending")
-        FirebaseFirestore.getInstance().collection("Register").document(sid)
-            .set(user)
-            .addOnCompleteListener {
-
-                val alert: AlertDialog.Builder = AlertDialog.Builder(this)
-                alert.setTitle("Registration Successful")
-                alert.setView(R.layout.register_alert_layout)
-                alert.setPositiveButton("Okay") { dialog, which ->
-                    dialog.dismiss()
-                    val intent = Intent(this, OnBoardingActivity::class.java)
-                    startActivity(intent)
-                }
-                alert.setCancelable(false)
-                val dialog: AlertDialog = alert.create()
-                dialog.show()
-
+        //Create user with email and password
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, sid)
+            .addOnSuccessListener {
+                Log.d("test", "Created email")
+                //Get uid and add to register
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(email, sid)
+                    .addOnSuccessListener {
+                        Log.d("test", "Signed in with email")
+                        val uid = FirebaseAuth.getInstance().currentUser?.uid
+                        val user = uid?.let { it1 ->
+                            Register(
+                                name,
+                                it1,
+                                sid,
+                                email,
+                                state,
+                                district,
+                                distance!!.toInt(),
+                                "pending"
+                            )
+                        }
+                        //Add user in register
+                        if (user != null) {
+                            FirebaseFirestore.getInstance().collection("Register").add(user)
+                                .addOnSuccessListener {
+                                    Log.d("test", "Added user to register")
+                                    val alert: AlertDialog.Builder = AlertDialog.Builder(this)
+                                    alert.setTitle("Registration Successful")
+                                    alert.setView(R.layout.register_alert_layout)
+                                    alert.setPositiveButton("Okay") { dialog, which ->
+                                        dialog.dismiss()
+                                        val intent = Intent(this, OnBoardingActivity::class.java)
+                                        startActivity(intent)
+                                    }
+                                    alert.setCancelable(false)
+                                    val dialog: AlertDialog = alert.create()
+                                    dialog.show()
+                                }.addOnFailureListener {
+                                    showSnackBar(this, it.toString(), binding.registerBottom)
+                                }
+                        }
+                    }.addOnFailureListener {
+                        showSnackBar(this, it.toString(), binding.registerBottom)
+                    }
+                FirebaseAuth.getInstance().signOut()
+            }.addOnFailureListener {
+                showSnackBar(this, it.toString(), binding.registerBottom)
             }
-
     }
 
     private fun stateJsonParse() {
