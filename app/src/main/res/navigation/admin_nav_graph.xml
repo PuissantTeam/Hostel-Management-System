@@ -3,17 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_navigation"
-    app:startDestination="@id/studentDashboardFragment">
-
+    app:startDestination="@id/adminDashboardFragment">
     <fragment
-        android:id="@+id/studentDashboardFragment"
-        android:name="com.example.hostelmanagementsystem.student.fragment.StudentDashboardFragment"
-        android:label="Admin Dashboard"
-        tools:layout="@layout/fragment_student_dashboard" />
-
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.example.hostelmanagementsystem.admin.AdminDashboardFragment"
+        android:label="Warden Dashboard"
+        tools:layout="@layout/fragment_admin_dashboard" />
     <fragment
-        android:id="@+id/studentProfileFragment"
-        android:name="com.example.hostelmanagementsystem.student.fragment.StudentProfileFragment"
-        android:label="Admin Profile"
-        tools:layout="@layout/fragment_student_profile" />
+        android:id="@+id/studentListFragment"
+        android:name="com.example.hostelmanagementsystem.admin.StudentListFragment"
+        android:label="Students"
+        tools:layout="@layout/fragment_student_admin" />
+    <fragment
+        android:id="@+id/wardenListFragment"
+        android:name="com.example.hostelmanagementsystem.admin.WardenListFragment"
+        android:label="Warden"
+        tools:layout="@layout/fragment_warden_admin" />
 </navigation>
