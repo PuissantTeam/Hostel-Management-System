@@ -157,15 +157,15 @@ class RegisterActivity : AppCompatActivity() {
                                     val dialog: AlertDialog = alert.create()
                                     dialog.show()
                                 }.addOnFailureListener {
-                                    showSnackBar(this, it.toString(), binding.registerBottom)
+                                    showSnackBar(this, it.toString(), binding.fakeAnchorLayout)
                                 }
                         }
                     }.addOnFailureListener {
-                        showSnackBar(this, it.toString(), binding.registerBottom)
+                        showSnackBar(this, it.toString(), binding.fakeAnchorLayout)
                     }
                 FirebaseAuth.getInstance().signOut()
             }.addOnFailureListener {
-                showSnackBar(this, it.toString(), binding.registerBottom)
+                showSnackBar(this, it.toString(), binding.fakeAnchorLayout)
             }
     }
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/round_background"
+    android:backgroundTint="@color/aqua_marine"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/warden_img"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:src="@drawable/warden_1" />
+
+    <TextView
+        android:id="@+id/warden_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_toEndOf="@id/warden_img"
+        android:padding="10dp"
+        android:text="Warden Name"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
