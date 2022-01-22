@@ -12,6 +12,21 @@
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/activity_register.xml" value="0.21822916666666667" />
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/dropdown_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_onboarding.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_admin.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_attendance.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_dashboard.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_grievance.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_leave.xml" value="0.2" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_student_profile.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_view_grievance.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_view_leave.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_warden_admin.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_warden_list.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/fragment_warden_profile.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/leave_grievance_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/leave_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/layout/student_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/StudioProjects/Hostel-Management-System-/app/src/main/res/menu/student_drawer_menu.xml" value="0.23229166666666667" />
         <entry key="app/src/main/res/drawable/background_border.xml" value="0.1921875" />
         <entry key="app/src/main/res/drawable/btn_blue_normal.xml" value="0.1921875" />
         <entry key="app/src/main/res/drawable/onboarding_selected_dot_blue.xml" value="0.21979166666666666" />

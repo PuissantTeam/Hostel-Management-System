@@ -27,9 +27,11 @@
         android:id="@+id/studentLeaveFragment"
         android:name="com.example.hostelmanagementsystem.student.fragment.StudentLeaveFragment"
         android:label="Student Leave" />
-
+  
     <fragment
-        android:id="@+id/studentMainActivity"
-        android:name="com.example.hostelmanagementsystem.student.fragment.MainActivity"
-        android:label="Main Activity" />
+        android:id="@+id/studentGrievanceFragment"
+        android:name="com.example.hostelmanagementsystem.student.fragment.StudentGrievanceFragment"
+        android:label="fragment_student_grievance"
+        tools:layout="@layout/fragment_student_grievance" />
+  
 </navigation>
