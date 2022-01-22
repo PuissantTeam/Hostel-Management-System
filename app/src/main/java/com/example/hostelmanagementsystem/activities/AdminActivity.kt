@@ -16,6 +16,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.hostelmanagementsystem.Data.Prefs
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.ActivityAdminBinding
+import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
 
 import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -76,7 +77,7 @@ class AdminActivity : AppCompatActivity() {
                     val prefs = Prefs(this)
                     prefs.status = 0
                     prefs.userType= "none"
-                    val intent = Intent(this, LoginActivity::class.java)
+                    val intent = Intent(this, OnBoardingActivity::class.java)
                     startActivity(intent)
                     finish()
                 }

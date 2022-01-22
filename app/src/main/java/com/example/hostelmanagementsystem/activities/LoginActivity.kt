@@ -10,6 +10,7 @@ import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.ActivityLoginBinding
 import com.example.hostelmanagementsystem.databinding.ActivityRegisterBinding
 import com.example.hostelmanagementsystem.extensions.showSnackBar
+import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -22,6 +23,11 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
+        binding.register.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        })
         binding.signinWithEmailButton.setOnClickListener(View.OnClickListener {
             val email = binding.emailEditText.text.toString().trim()
             val password = binding.passwordEditText.text.toString().trim()
