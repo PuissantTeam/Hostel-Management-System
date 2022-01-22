@@ -16,7 +16,7 @@
     <string name="title_onboarding_3">Don\'t miss any lectures</string>
     <string name="description_onboarding_3">Watch any missed lecture at any place any time</string>
     <string name="dashboard">Dashboard</string>
-    <string name="profile">profile</string>
+    <string name="profile">Profile</string>
     <string name="leave">Ask For Leave</string>
     <string name="full_name">Full Name</string>
     <string name="email">E-Mail</string>
@@ -31,7 +31,7 @@
     <string name="open_email">Open email</string>
     <string name="register_alert">You have been registered for hostel room allocation. Once your registration is approved and a hostel room is allocated, You will be receiving your password for login.</string>
     <string name="logout">Logout</string>
-    <string name="student">Student</string>
+    <string name="student">Students</string>
     <string name="allocation">Allocation</string>
     <string name="view_leave">View Leave</string>
     <string name="grievance">Grievance</string>

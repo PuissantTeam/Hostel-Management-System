@@ -3,17 +3,21 @@
 
     <item
         android:id="@+id/studentDashboardFragment"
-        android:title="@string/dashboard"    />
+        android:title="@string/dashboard"
+        android:icon="@drawable/dashboard_image"/>
     <item
         android:id="@+id/studentProfileFragment"
-        android:title="@string/profile" />
+        android:title="@string/profile"
+        android:icon="@drawable/profile_image"/>
     <item
         android:id="@+id/studentLeaveFragment"
-        android:title="@string/leave" />
+        android:title="@string/leave"
+        android:icon="@drawable/view_leave_image"/>
     <item
         android:id="@+id/studentGrievanceFragment"
         android:title="@string/grievance" />
     <item
         android:id="@+id/student_logout"
-        android:title="@string/logout" />
+        android:title="@string/logout"
+        android:icon="@drawable/logout_image"/>
 </menu>

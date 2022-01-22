@@ -3,8 +3,10 @@
 
     <item
         android:id="@+id/studentDashboardFragment"
-        android:title="@string/dashboard"    />
+        android:title="@string/dashboard"
+        android:icon="@drawable/dashboard_image"  />
     <item
         android:id="@+id/studentProfileFragment"
-        android:title="@string/profile" />
+        android:title="@string/profile"
+        android:icon="@drawable/profile_image"/>
 </menu>
