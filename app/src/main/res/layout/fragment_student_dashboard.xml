@@ -1,14 +1,411 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.student.StudentDashboardFragment">
+    android:background="@drawable/primary_background"
+    tools:context=".student.fragment.StudentAttendanceFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/student_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_background"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="Student Dashboard"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/total_student_attendance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/student_dashboard"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text="Total Attendance:- "
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total_student_attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/student_dashboard"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/total_student_attendance_text"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text="420"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/student_allotted_room_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total_student_attendance_text"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text="Allotted Room:-"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/student_allotted_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total_student_attendance_text"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/student_allotted_room_text"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text="123"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/weekly_attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/student_allotted_room_text"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/round_background">
+
+        <TextView
+            android:id="@+id/weekly_attendance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="Weekly Attendance"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/weekly_attendance_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weekly_attendance_text"
+            android:layout_marginStart="10dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="82.6%"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:baselineAligned="true"
+            android:id="@+id/attendance_graphs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weekly_attendance_percentage">
+            <LinearLayout
+                android:id="@+id/monday_attendance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                
+                android:layout_marginStart="20dp"
+                android:background="@drawable/black_round_background"
+                android:orientation="vertical"
+                android:rotation="180">
+
+                <View
+                    android:id="@+id/missed_times_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/yellow_round_background" />
+                
+                <View
+                    android:id="@+id/attended_times_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tuesday_attendance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                
+                android:layout_marginStart="20dp"
+
+                android:background="@drawable/black_round_background"
+                android:orientation="vertical"
+                android:rotation="180">
+
+                <View
+                    android:id="@+id/missed_times_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/yellow_round_background" />
+                
+                <View
+                    android:id="@+id/attended_times_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="bottom" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wednesday_attendance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                
+                android:layout_marginStart="20dp"
+
+                android:background="@drawable/black_round_background"
+                android:orientation="vertical"
+                android:rotation="180">
+
+                <View
+                    android:id="@+id/missed_times_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/yellow_round_background" />
+                
+                <View
+                    android:id="@+id/attended_times_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="bottom"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/thursday_attendance"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/black_round_background"
+                android:orientation="vertical"
+                android:rotation="180">
+
+                <View
+                    android:id="@+id/missed_times_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/yellow_round_background" />
+                
+                <View
+                    android:id="@+id/attended_times_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="bottom" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/friday_attendance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/black_round_background"
+                android:orientation="vertical"
+                android:rotation="180">
+
+                <View
+                    android:id="@+id/missed_times_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/yellow_round_background" />
+                
+                <View
+                    android:id="@+id/attended_times_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="bottom"/>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/saturday_attendance"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/black_round_background"
+                android:orientation="vertical"
+                android:rotation="180">
+
+                <View
+                    android:id="@+id/missed_times_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/yellow_round_background" />
+                
+                <View
+                    android:id="@+id/attended_times_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="bottom"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sunday_attendance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/black_round_background"
+                android:orientation="vertical"
+                android:rotation="180">
+
+                <View
+                    android:id="@+id/missed_times_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/yellow_round_background" />
+                
+                <View
+                    android:id="@+id/attended_times_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="bottom"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attendance_graphs">
+
+            <TextView
+                android:id="@+id/monday_attendance_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:textAlignment="center"
+                android:text="M"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tuesday_attendance_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textAlignment="center"
+                android:text="T"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/wednesday_attendance_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:textAlignment="center"
+                android:text="W"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/thursday_attendance_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textAlignment="center"
+                android:text="T"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/friday_attendance_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textAlignment="center"
+                android:text="F"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/saturday_attendance_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textAlignment="center"
+                android:text="S"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/sunday_attendance_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:textAlignment="center"
+                android:text="S"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/announcements_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weekly_attendance"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Announcements"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/announcements_text"
+        tools:listitem="@layout/student_announcement_recycler_view_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
