@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-<item
-        android:id="@+id/studentDashboard"
-        android:title="@string/dashboard"
+    <item
+        android:id="@+id/studentDashboardFragment"
+
         android:icon="@drawable/dashboard_image"
-        />
+        android:title="@string/dashboard" />
 
     <item
         android:id="@+id/studentAttendanceFragment"
-        android:title="@string/attendance"
-        android:icon="@drawable/attendance_image"/>
+        android:icon="@drawable/attendance_image"
+        android:title="@string/attendance" />
     <item
         android:id="@+id/studentProfileFragment"
-        android:title="@string/profile"
-        android:icon="@drawable/profile_image"/>
+        android:icon="@drawable/profile_image"
+        android:title="@string/profile" />
 </menu>

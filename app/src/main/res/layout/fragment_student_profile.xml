@@ -237,7 +237,7 @@
                 app:autoSizeTextType="uniform" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/profile_check_in_text"
+                android:id="@+id/profile_state"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/profile_student_mail"
@@ -246,7 +246,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="Checked In"
+                android:text="State"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/black"
                 app:autoSizeMaxTextSize="18sp"
@@ -255,15 +255,48 @@
                 app:autoSizeTextType="uniform" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/profile_check_in"
+                android:id="@+id/profile_state_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/profile_check_in_text"
+                android:layout_below="@id/profile_state"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="Yes"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profile_district"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_state_text"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="District"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profile_district_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_district"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/black"
                 app:autoSizeMaxTextSize="18sp"

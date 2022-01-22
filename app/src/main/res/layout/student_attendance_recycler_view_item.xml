@@ -53,5 +53,6 @@
             android:padding="10dp"
             tools:text="Check out: hh:mm" />
 
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
