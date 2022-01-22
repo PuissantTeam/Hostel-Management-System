@@ -12,6 +12,9 @@ import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
@@ -42,8 +45,8 @@ class LoginActivity : AppCompatActivity() {
                 OnCompleteListener {
                     if (it.isSuccessful) {
                         val user = FirebaseAuth.getInstance().currentUser
-                        if(user == null)
-                            showSnackBar(this,"Something went wrong", binding.loginBottom)
+                        if (user == null)
+                            showSnackBar(this, "Something went wrong", binding.loginBottom)
 
                         FirebaseFirestore.getInstance().collection("User").document(user!!.uid)
                             .get().addOnCompleteListener(
@@ -57,6 +60,42 @@ class LoginActivity : AppCompatActivity() {
                                         mAuth.signOut()
                                         return@OnCompleteListener
                                     }
+                                    FirebaseMessaging.getInstance().token.addOnCompleteListener(
+                                        OnCompleteListener { task ->
+                                            if (!task.isSuccessful) {
+                                                Log.w(
+                                                    "LOOK",
+                                                    "Fetching FCM registration token failed",
+                                                    task.exception
+                                                )
+                                                return@OnCompleteListener
+                                            }
+
+                                            // Get new FCM registration token
+                                            val token = task.result
+
+                                            Log.w("LOOK ", token)
+
+
+                                            val user = mAuth.currentUser
+
+                                            if (user != null) {
+
+                                                val usr = hashMapOf(
+                                                    "fcmToken" to token
+                                                )
+
+                                                Firebase.firestore.collection("fcmTokens")
+                                                    .document(user.uid)
+                                                    .set(usr)
+                                                    .addOnCompleteListener {
+                                                        Log.w(
+                                                            "LOOK",
+                                                            "Fcm Token Written to Firestore: " + it.isSuccessful
+                                                        )
+                                                    }
+                                            }
+                                        })
                                     val userType = it.result.getString("userType")
                                     val prefs = Prefs(this)
                                     prefs.status = 1
@@ -77,8 +116,7 @@ class LoginActivity : AppCompatActivity() {
                                         startActivity(intent)
                                     }
                                 })
-                    }
-                    else{
+                    } else {
                         showSnackBar(this, "Something went wrong", binding.loginBottom)
                     }
                 }).addOnFailureListener {

@@ -20,6 +20,12 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp">
+            <ProgressBar
+                android:id="@+id/attendance_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/todays_date"
@@ -59,10 +65,12 @@
                 android:scrollHorizontally="true"
                 android:singleLine="true"
                 android:text="Hello there, Dhiraj Kumar Chauhan"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextClock
+                android:id="@+id/attendance_clock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@id/check_in_button"
@@ -71,10 +79,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="20dp"
-                android:textSize="24sp"
-                android:textStyle="bold"
+                android:format12Hour="HH:mm:ss"
                 android:textColor="@color/black"
-                android:format12Hour="HH:mm:ss" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/check_in_button"
@@ -91,7 +99,9 @@
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/attendance_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/today_date_layout"

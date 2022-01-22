@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".student.fragment.StudentProfileFragment"
     android:background="@drawable/primary_background">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ProgressBar
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:indeterminate="true"
             android:indeterminateTint="@color/black"
-            android:layout_centerInParent="true"
-            android:visibility="invisible"/>
+            android:visibility="invisible" />
 
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -49,14 +52,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/profile_username"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
+
             <LinearLayout
                 android:id="@+id/room_allocated_layout"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/profile_room_allocated"
@@ -66,7 +70,6 @@
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
                     android:maxLines="1"
-                    android:text="102"
                     android:textColor="@color/cario_color_dark" />
 
                 <TextView
@@ -85,7 +88,7 @@
                 android:layout_height="80dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/profile_student_id"
@@ -95,7 +98,6 @@
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
                     android:maxLines="1"
-                    android:text="123"
                     android:textColor="@color/cario_color_dark" />
 
                 <TextView
@@ -115,7 +117,7 @@
                 android:layout_height="80dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
 
                 <TextView
@@ -193,7 +195,6 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="@string/full_name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/black"
                 app:autoSizeMaxTextSize="18sp"
@@ -228,7 +229,6 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="123@gmail.com"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/black"
                 app:autoSizeMaxTextSize="18sp"

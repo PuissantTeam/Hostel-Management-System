@@ -55,7 +55,7 @@ class WardenActivity : AppCompatActivity() {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.warden, menu)
         return true
     }

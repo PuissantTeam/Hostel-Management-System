@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hostelmanagementsystem.R
-import com.example.hostelmanagementsystem.data.LeaveModel
-import com.example.hostelmanagementsystem.data.Register
+import com.example.hostelmanagementsystem.student.model.LeaveModel
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.android.material.button.MaterialButton
