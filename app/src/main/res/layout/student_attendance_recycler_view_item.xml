@@ -26,6 +26,7 @@
             android:backgroundTint="@color/primary_color"
             android:gravity="center"
             android:padding="10dp"
+            android:textColor="@color/black"
             tools:text="13 March" />
 
         <TextView
@@ -35,9 +36,9 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:layout_toEndOf="@id/attendance_date"
-            android:textColor="@color/black"
             android:gravity="center"
             android:padding="10dp"
+            android:textColor="@color/black"
             tools:text="Check in: hh:mm" />
 
         <TextView
