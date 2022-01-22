@@ -17,7 +17,7 @@ class LeaveAdapter(options: FirestoreRecyclerOptions<LeaveModel>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LeaveHolder {
         val v: View = LayoutInflater.from(parent.context).inflate(
-            R.layout.leave_it,
+            R.layout.leave_item,
             parent, false
         )
         return LeaveHolder(v)
