@@ -23,7 +23,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
 
 class RegisterActivity : AppCompatActivity() {
-    lateinit var binding: ActivityRegisterBinding
+    private lateinit var binding: ActivityRegisterBinding
     private val state_list = java.util.ArrayList<String>()
     private val district_list = java.util.ArrayList<DistrictItems>()
     private val district_name_list = java.util.ArrayList<String>()
@@ -79,7 +79,7 @@ class RegisterActivity : AppCompatActivity() {
         requestOueue = Volley.newRequestQueue(this)
         stateJsonParse()
         binding.RegisterBtnRegister.setOnClickListener(View.OnClickListener {
-            registerUser(view);
+            registerUser(view)
         })
         setContentView(view)
     }

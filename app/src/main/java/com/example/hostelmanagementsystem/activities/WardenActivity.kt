@@ -16,6 +16,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.hostelmanagementsystem.data.Prefs
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
+
 import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
