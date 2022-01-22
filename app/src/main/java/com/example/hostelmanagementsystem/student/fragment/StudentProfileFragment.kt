@@ -41,6 +41,8 @@ class StudentProfileFragment : Fragment() {
                 studentProfileBinding.profileRoomAllocated.text = doc.getString("roomNo").toString()
                 studentProfileBinding.profileStudentId.text = doc.getString("sid").toString()
                 studentProfileBinding.profileUsername.text = doc.getString("name").toString()
+                studentProfileBinding.profileStateText.text = doc.getString("state").toString()
+                studentProfileBinding.profileDistrictText.text = doc.getString("district").toString()
             }
         }.addOnFailureListener {
             Log.d(TAG, it.message.toString())

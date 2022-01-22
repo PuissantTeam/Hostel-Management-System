@@ -39,6 +39,7 @@ import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 lateinit var permissionHelper: FragmentPermissionHelper
 
 class StudentAttendanceFragment : Fragment(), PermissionListener {
@@ -82,12 +83,14 @@ class StudentAttendanceFragment : Fragment(), PermissionListener {
         prefs = Prefs(requireContext())
         val currentUser = FirebaseAuth.getInstance().currentUser
 
-        Firebase.firestore.collection("User").document(currentUser!!.uid).get().addOnCompleteListener {
-            val doc = it.result
-            if (doc != null) {
-                studentAttendanceBinding.studentName.text = "Hello there, ${doc.getString("name").toString()}"
-            }
-        }.addOnFailureListener {
+        Firebase.firestore.collection("User").document(currentUser!!.uid).get()
+            .addOnCompleteListener {
+                val doc = it.result
+                if (doc != null) {
+                    studentAttendanceBinding.studentName.text =
+                        "Hello there, ${doc.getString("name").toString()}"
+                }
+            }.addOnFailureListener {
             Log.d(TAG, it.message.toString())
             showSnackBar(requireActivity(), it.message, anchorView)
         }
@@ -101,9 +104,11 @@ class StudentAttendanceFragment : Fragment(), PermissionListener {
 
         val user = FirebaseAuth.getInstance().currentUser
 
-        val queryAttendance =
+
+        val queryAttendance: Query =
             attendanceRef.document(user!!.uid).collection("Attendance")
                 .orderBy("date", Query.Direction.DESCENDING)
+
         val optionsAttendance: FirestoreRecyclerOptions<StudentAttendanceModel> =
             FirestoreRecyclerOptions.Builder<StudentAttendanceModel>()
                 .setQuery(queryAttendance, StudentAttendanceModel::class.java).build()

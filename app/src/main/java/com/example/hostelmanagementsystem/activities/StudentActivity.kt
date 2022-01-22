@@ -61,7 +61,7 @@ class StudentActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.student_drawer_menu, menu)
+        menuInflater.inflate(R.menu.student_menu, menu)
         return true
     }
 

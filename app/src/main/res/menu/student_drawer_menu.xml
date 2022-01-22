@@ -15,6 +15,7 @@
         android:icon="@drawable/view_leave_image"/>
     <item
         android:id="@+id/studentGrievanceFragment"
+        android:icon="@drawable/grievance"
         android:title="@string/grievance" />
     <item
         android:id="@+id/student_logout"

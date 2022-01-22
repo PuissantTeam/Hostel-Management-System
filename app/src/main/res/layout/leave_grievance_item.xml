@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/today_date_layout"
         android:layout_width="match_parent"
@@ -11,48 +12,66 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        app:cardCornerRadius="20dp" >
+        app:cardCornerRadius="20dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/grievance_title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="21 Jan 2021"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Title"
                 android:textColor="@color/black"
-                android:textSize="32sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/grievance_desc"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/grievance_title"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/grievance_name"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@id/grievance_title"
-                android:layout_marginTop="16dp"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/grievance_desc"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:text="Ishir Agrawal"
+                android:textColor="@color/black" />
 
-
-
-
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/grievance_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/grievance_desc"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round_background"
+                android:text="Resolve"
+                app:backgroundTint="@color/primary_color" />
 
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
-
 
 
 </RelativeLayout>
