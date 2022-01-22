@@ -5,8 +5,10 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.os.CountDownTimer
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.ProgressBar
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -68,6 +70,17 @@ fun Snackbar.action(action: String, color: Int? = null, listener: (View) -> Unit
 fun <T> Context.openActivity(it: Class<T>) {
     val intent = Intent(this, it)
     startActivity(intent)
+}
+fun timer(progressBar: ProgressBar, time:Long) {
+    object : CountDownTimer(time, 1000) {
+        override fun onTick(millisUntilFinished: Long) {
+            progressBar.visibility = View.VISIBLE
+        }
+
+        override fun onFinish() {
+            progressBar.visibility = View.GONE
+        }
+    }.start()
 }
 
 

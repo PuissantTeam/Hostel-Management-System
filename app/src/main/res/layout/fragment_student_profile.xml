@@ -8,6 +8,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"/>
 
 
         <androidx.appcompat.widget.AppCompatImageView
