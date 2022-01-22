@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.hostelmanagementsystem.data.LeaveModel
 import com.example.hostelmanagementsystem.databinding.FragmentStudentLeaveBinding
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat
@@ -78,20 +80,43 @@ class StudentLeaveFragment : Fragment() {
         val startDate: String = binding.startdateLeave.text.toString()
         val endDate: String = binding.enddateLeave.text.toString()
         val reason: String = binding.reasonStudentLeave.text.toString()
-
-        if (reason.isNotEmpty() && startDate.isNotEmpty()) {
-            val leaveModel = LeaveModel(startDate, endDate, reason,status)
-            leaveRef.add(leaveModel)
-                .addOnSuccessListener {
+        if(reason.isEmpty()){
+            binding.reasonStudentLeave.error = "Enter a reason"
+            return
+        }
+        if(startDate.isEmpty()){
+            binding.startdateStudentLeave.error = "Enter the start date"
+            return
+        }
+        if(endDate.isEmpty()){
+            binding.enddateLeave.error= "Enter the end date"
+            return
+        }
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            FirebaseFirestore.getInstance().collection("User").document(user.uid).get()
+                .addOnCompleteListener(OnCompleteListener {
+                    val result = it.result
+                    if(result.exists() && result != null){
+                        val name = result.getString("name").toString()
+                        val sid =  result.getString("sid").toString()
+                        val roomNo = result.getString("roomNo").toString()
+                        val leaveModel = LeaveModel(startDate, endDate, reason, status, name, sid, roomNo)
+                        leaveRef.add(leaveModel)
+                            .addOnSuccessListener {
 //                    showSnackBar(requireActivity(), "Thanks you for giving us a feedback")
 //                    view.findNavController().navigate(R.id.)
-                    Toast.makeText(context, "Successful", Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener {
-                    Toast.makeText(context, "something wrong", Toast.LENGTH_SHORT).show()
-                }
-        } else {
-            Toast.makeText(context, "error", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(context, "Successful", Toast.LENGTH_SHORT).show()
+                            }
+                            .addOnFailureListener {
+                                Toast.makeText(context, "something wrong", Toast.LENGTH_SHORT).show()
+                            }
+                    }
+                })
+
         }
+
+
+
     }
 }
