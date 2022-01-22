@@ -39,8 +39,8 @@ class StudentAttendanceAdapter(options: FirestoreRecyclerOptions<StudentAttendan
         model: StudentAttendanceModel
     ) {
         holder.attendanceDate.text = model.date
-        holder.attendanceCheckIn.text = model.checkIn
-        holder.attendanceCheckOut.text = model.checkOut
+        holder.attendanceCheckIn.text = "CheckIn: ${model.checkIn}"
+        holder.attendanceCheckOut.text = "CheckOut: ${model.checkOut}"
 
         holder.itemView.setOnClickListener { onClick!!.onItemClick(position, announcementUrl) }
 
