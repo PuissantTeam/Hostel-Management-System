@@ -161,11 +161,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="70dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/primary_color"
+            android:background="@color/blue_Dark"
             android:text="REGISTER"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textSize="16sp" />
 
     </RelativeLayout>
   

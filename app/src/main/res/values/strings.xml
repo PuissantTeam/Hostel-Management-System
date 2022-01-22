@@ -7,14 +7,15 @@
     <string name="start_text_advice">By continuing on this application you agree to our Terms of Use and Privacy Policy</string>
 
 
-    <string name="title_onboarding_1">Welcome to app!</string>
+    <string name="title_onboarding_1">Welcome to AnyHostel!</string>
     <string name="description_onboarding_1">Your one stop to any hostel work</string>
 
-    <string name="title_onboarding_2">Build a healthy community with our forum</string>
-    <string name="description_onboarding_2">Can\'t get teachers to answer quick? get your questions solved here under a day!</string>
+    <string name="title_onboarding_2">Location based attendance tracking</string>
+    <string name="description_onboarding_2">Check in check out for a day by just one tap!</string>
 
-    <string name="title_onboarding_3">Don\'t miss any lectures</string>
-    <string name="description_onboarding_3">Watch any missed lecture at any place any time</string>
+    <string name="title_onboarding_3">Build a healthy community with our app</string>
+    <string name="description_onboarding_3">Get answers to your grievances and leave requests </string>
+
     <string name="dashboard">Dashboard</string>
     <string name="profile">Profile</string>
     <string name="leave">Ask For Leave</string>

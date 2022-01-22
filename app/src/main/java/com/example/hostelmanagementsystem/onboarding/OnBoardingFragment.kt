@@ -37,10 +37,10 @@ class OnBoardingFragment : Fragment() {
 
         tvTitle = fragmentOnBoardingBinding.textOnboardingTitle
         tvDescription = fragmentOnBoardingBinding.textOnboardingDescription
-//        image = fragmentOnBoardingBinding.imageOnboarding
+        image = fragmentOnBoardingBinding.imageOnboarding
         tvTitle.text = title
         tvDescription.text = description
-//        image.setAnimation(imageResource)
+        image.setAnimation(imageResource)
         return rootView
     }
 
@@ -51,14 +51,14 @@ class OnBoardingFragment : Fragment() {
         private const val ARG_PARAM3 = "param3"
         fun newInstance(
             title: String?,
-            description: String?
-//            imageResource: Int
+            description: String?,
+            imageResource: Int
         ): OnBoardingFragment {
             val fragment = OnBoardingFragment()
             val args = Bundle()
             args.putString(ARG_PARAM1, title)
             args.putString(ARG_PARAM2, description)
-//            args.putInt(ARG_PARAM3, imageResource)
+            args.putInt(ARG_PARAM3, imageResource)
             fragment.arguments = args
             return fragment
         }

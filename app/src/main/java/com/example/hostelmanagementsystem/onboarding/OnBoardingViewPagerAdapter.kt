@@ -16,18 +16,18 @@ class OnBoardingViewPagerAdapter(
         return when (position) {
             0 -> OnBoardingFragment.newInstance(
                 context.resources.getString(R.string.title_onboarding_1),
-                context.resources.getString(R.string.description_onboarding_1)
-//                R.raw.lottie_splash_animation
+                context.resources.getString(R.string.description_onboarding_1),
+                R.raw.lottie_splash_animation
             )
             1 -> OnBoardingFragment.newInstance(
                 context.resources.getString(R.string.title_onboarding_2),
-                context.resources.getString(R.string.description_onboarding_2)
-//                R.raw.lottie_study
+                context.resources.getString(R.string.description_onboarding_2),
+                R.raw.lottie_location
             )
             else -> OnBoardingFragment.newInstance(
                 context.resources.getString(R.string.title_onboarding_3),
-                context.resources.getString(R.string.description_onboarding_3)
-//                R.raw.lottie_lecture
+                context.resources.getString(R.string.description_onboarding_3),
+                R.raw.lottie_study
             )
         }
     }

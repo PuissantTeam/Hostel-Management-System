@@ -12,67 +12,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/white">
-
-
-            <!--        <TextView-->
-            <!--            android:id="@+id/desc"-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_centerHorizontal="true"-->
-            <!--            android:layout_marginStart="16dp"-->
-            <!--            android:layout_marginTop="75dp"-->
-            <!--            android:fontFamily="@font/roboto"-->
-            <!--            android:gravity="center"-->
-            <!--            android:lineSpacingExtra="8sp"-->
-            <!--            android:text="@string/desc"-->
-            <!--            android:textAppearance="@style/desc"-->
-            <!--            android:translationY="-3.8sp" />-->
-
-            <!--        <RelativeLayout-->
-            <!--            android:id="@+id/google_sign_in_layout"-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="60dp"-->
-            <!--            android:layout_below="@id/title"-->
-            <!--            android:layout_marginStart="16dp"-->
-            <!--            android:layout_marginTop="20dp"-->
-            <!--            android:layout_marginEnd="16dp"-->
-            <!--            android:visibility="gone"-->
-            <!--            android:background="@drawable/rounded_background_border">-->
-
-            <!--            <ImageView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="30dp"-->
-            <!--                android:layout_centerVertical="true"-->
-            <!--                android:layout_marginStart="26dp"-->
-            <!--                android:src="@drawable/google_icon_48px" />-->
-
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_centerInParent="true"-->
-            <!--                android:text="@string/log_in_with_google"-->
-            <!--                android:textColor="@color/black"-->
-            <!--                android:textSize="20sp"-->
-            <!--                android:textStyle="bold" />-->
-            <!--        </RelativeLayout>-->
-
-            <!--        <TextView-->
-            <!--            android:id="@+id/or"-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_below="@+id/google_sign_in_layout"-->
-            <!--            android:layout_centerHorizontal="true"-->
-            <!--            android:layout_marginTop="25dp"-->
-            <!--            android:gravity="center"-->
-            <!--            android:text="@string/or"-->
-            <!--            android:textAppearance="@style/desc"-->
-            <!--            android:textColor="@color/grey"-->
-            <!--            android:textSize="18sp"-->
-            <!--            android:textStyle="bold"-->
-            <!--            android:visibility="gone"-->
-            <!--            android:translationY="-3.8sp" />-->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailLayoutSignInScreen"
@@ -130,11 +71,11 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="70dp"
                 android:layout_marginEnd="16dp"
-                android:background="@color/primary_color"
-                android:text="Sign In"
+                android:background="@color/blue_Dark"
+                android:text="Login"
+                android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="16sp" />
 
             <RelativeLayout
                 android:id="@+id/divider_layout"
@@ -161,11 +102,11 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="16dp"
-                android:background="@color/primary_color"
+                android:background="@drawable/background_border"
                 android:text="Register"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textAllCaps="true"
+                android:textColor="@color/blue_Dark"
+                android:textSize="16sp" />
 
 
         </RelativeLayout>
