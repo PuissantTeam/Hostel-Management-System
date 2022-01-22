@@ -26,6 +26,7 @@ class StudentLeaveFragment : Fragment() {
     private val binding get() = _binding!!
     private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
     private val leaveRef: CollectionReference = db.collection("Leave")
+    private lateinit var status: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +34,7 @@ class StudentLeaveFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentStudentLeaveBinding.inflate(inflater, container, false)
+        status = "pending"
 
         binding.startdateLeave.setOnClickListener {
             val dpd =
@@ -53,7 +55,7 @@ class StudentLeaveFragment : Fragment() {
 
             d.show()
         }
-        binding.enddateLeave.setOnClickListener{
+        binding.enddateLeave.setOnClickListener {
             val dpd =
                 DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
                     val s = monthOfYear + 1
@@ -62,12 +64,12 @@ class StudentLeaveFragment : Fragment() {
                 }
 //            binding.startdateLeave.isEnabled=false
             val c = Calendar.getInstance()
-            val mYear: Int = c.get(Calendar.YEAR)
-            val mMonth: Int = c.get(Calendar.MONTH)
-            val mDay: Int = c.get(Calendar.DAY_OF_MONTH)
+            val Year: Int = c.get(Calendar.YEAR)
+            val Month: Int = c.get(Calendar.MONTH)
+            val Day: Int = c.get(Calendar.DAY_OF_MONTH)
             val serverFormat = SimpleDateFormat("DD:MM:yy", Locale.getDefault())
 //            serverFormat.format(c)
-            val d = DatePickerDialog(requireContext(), dpd, mYear, mMonth, mDay)
+            val d = DatePickerDialog(requireContext(), dpd, Year, Month, Day)
             d.datePicker.minDate = Date().time
 
             d.show()
@@ -78,13 +80,13 @@ class StudentLeaveFragment : Fragment() {
         return binding.root
     }
 
-        private fun submitLeave(view: View) {
+    private fun submitLeave(view: View) {
         val startDate: String = binding.startdateLeave.text.toString()
-            val endDate: String = binding.enddateLeave.text.toString()
+        val endDate: String = binding.enddateLeave.text.toString()
         val reason: String = binding.reasonStudentLeave.text.toString()
 
         if (reason.isNotEmpty() && startDate.isNotEmpty()) {
-            val leaveModel = LeaveModel(startDate,endDate, reason)
+            val leaveModel = LeaveModel(startDate, endDate, reason,status)
             leaveRef.add(leaveModel)
                 .addOnSuccessListener {
 //                    showSnackBar(requireActivity(), "Thanks you for giving us a feedback")
