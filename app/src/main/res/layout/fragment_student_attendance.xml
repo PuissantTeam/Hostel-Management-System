@@ -28,8 +28,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="21 Jan 2021"
-                android:textSize="32sp"
                 android:textColor="@color/black"
+                android:textSize="32sp"
                 android:textStyle="bold" />
 
             <TextView

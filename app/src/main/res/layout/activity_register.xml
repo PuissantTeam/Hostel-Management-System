@@ -167,42 +167,10 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <!--        <RelativeLayout-->
-        <!--            android:id="@+id/divider_layout"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_below="@id/register_signup_screen"-->
-        <!--            android:layout_centerInParent="true"-->
-        <!--            android:layout_marginTop="30dp">-->
-
-
-        <!--            <View-->
-        <!--                android:id="@+id/right_line"-->
-        <!--                android:layout_width="68dp"-->
-        <!--                android:layout_height="01dp"-->
-        <!--                android:layout_marginStart="74dp"-->
-        <!--                android:layout_marginTop="07dp"-->
-        <!--                android:layout_marginEnd="-12dp"-->
-        <!--                android:background="@drawable/line" />-->
-        <!--        </RelativeLayout>-->
-
-        <!--        <com.royrodriguez.transitionbutton.TransitionButton-->
-        <!--            android:id="@+id/signin_with_email_button_signup_screen"-->
-        <!--            style="@style/desc"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_below="@id/divider_layout"-->
-        <!--            android:layout_centerHorizontal="true"-->
-        <!--            android:layout_marginStart="16dp"-->
-        <!--            android:layout_marginTop="30dp"-->
-        <!--            android:layout_marginEnd="16dp"-->
-        <!--            android:text="@string/sign_in"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textSize="16sp"-->
-        <!--            android:textStyle="bold"-->
-        <!--            app:defaultColor="@color/primary_color"-->
-        <!--            app:loaderColor="@android:color/white" />-->
-
-
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/fake_anchor_layout"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

@@ -6,11 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.ActionBar
 import androidx.viewpager2.widget.ViewPager2
-import com.example.hostelmanagementsystem.Data.Prefs
+import com.example.hostelmanagementsystem.data.Prefs
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.activities.*
 
-import com.example.hostelmanagementsystem.databinding.ActivityOnBoardingBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 class OnBoardingActivity : AppCompatActivity() {
