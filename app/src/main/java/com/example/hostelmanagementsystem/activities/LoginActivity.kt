@@ -26,11 +26,11 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.emailEditText.text.toString().trim()
             val password = binding.passwordEditText.text.toString().trim()
             if (email.isEmpty()) {
-                binding.emailEditText.error = "Enter email"
+                binding.emailLayoutSignInScreen.error = "Enter email"
                 return@OnClickListener
             }
             if (password.isEmpty()) {
-                binding.passwordEditText.error = "Enter Password"
+                binding.passwordLayoutSignInScreen.error = "Enter Password"
                 return@OnClickListener
             }
             val mAuth = FirebaseAuth.getInstance()
