@@ -18,7 +18,8 @@
         android:icon="@drawable/grievance"
         android:title="@string/grievance" />
     <item
-        android:id="@+id/student_logout"
-        android:title="@string/logout"
-        android:icon="@drawable/logout_image"/>
+        android:id="@+id/studentDashboardFragment"
+        android:icon="@drawable/dashboard_image"
+        android:title="@string/dashboard" />
+
 </menu>

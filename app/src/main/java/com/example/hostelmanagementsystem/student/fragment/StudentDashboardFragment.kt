@@ -6,12 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 
 import com.example.hostelmanagementsystem.databinding.FragmentStudentDashboardBinding
-import android.content.Intent
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.hostelmanagementsystem.admin.adapter.StudentFragmentAdapter
-import com.example.hostelmanagementsystem.admin.model.AdminStudent
 import com.example.hostelmanagementsystem.student.model.AnnouncementModel
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.FirebaseFirestore

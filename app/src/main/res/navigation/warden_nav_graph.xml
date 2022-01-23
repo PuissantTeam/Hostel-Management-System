@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/allocationFragment"
         android:name="com.example.hostelmanagementsystem.warden.fragment.AllocationFragment"
-        android:label="fragment_allocation"
+        android:label="Allocation"
         tools:layout="@layout/fragment_allocation" />
 
     <fragment
@@ -23,7 +23,7 @@
     <fragment
         android:id="@+id/studentDetailFragment"
         android:name="com.example.hostelmanagementsystem.studentDetails.StudentDetailFragment"
-        android:label="fragment_student_detail"
+        android:label="Details"
         tools:layout="@layout/fragment_student_detail" >
         <action
             android:id="@+id/action_studentDetailFragment_to_updateDetailFragment"
@@ -35,7 +35,7 @@
     <fragment
         android:id="@+id/updateDetailFragment"
         android:name="com.example.hostelmanagementsystem.studentDetails.UpdateDetailFragment"
-        android:label="fragment_update_detail"
+        android:label="Update Details"
         tools:layout="@layout/fragment_update_detail" >
         <action
             android:id="@+id/action_updateDetailFragment_to_studentDetailFragment"
@@ -44,12 +44,12 @@
     <fragment
         android:id="@+id/viewLeaveFragment"
         android:name="com.example.hostelmanagementsystem.warden.fragment.ViewLeaveFragment"
-        android:label="ViewLeaveFragment"
+        android:label="Leave Applications"
         tools:layout="@layout/fragment_view_leave"/>
     <fragment
         android:id="@+id/viewGrievanceFragment"
         android:name="com.example.hostelmanagementsystem.warden.fragment.ViewGrievanceFragment"
-        android:label="ViewGrievanceFragment"
+        android:label="Grievances"
         tools:layout="@layout/fragment_view_grievance" />
     <fragment
         android:id="@+id/adminNoticeFragment"
