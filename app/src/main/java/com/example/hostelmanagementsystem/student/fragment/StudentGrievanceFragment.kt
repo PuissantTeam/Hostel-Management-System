@@ -50,7 +50,8 @@ class StudentGrievanceFragment : Fragment() {
                     if(result.exists() && result != null){
                         val name = result.getString("name").toString()
                         val sid =  result.getString("sid").toString()
-                        val grievanceModel = GrievanceModel(title, description,  name, sid)
+                        val uid = result.getString("uid").toString()
+                        val grievanceModel = GrievanceModel(title, description,  name, sid, uid, "0")
                         grievRef.add(grievanceModel)
                             .addOnSuccessListener {
                                 showSnackBar(requireActivity(), "Your Grievance has been sent to the warden",binding.fakeAnchorLayout)
