@@ -32,6 +32,9 @@
             android:name=".activities.WardenActivity"
             android:exported="false" />
         <activity
+            android:name=".onboarding.OnBoardingActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.RegisterActivity"
             android:exported="false" />
         <activity
@@ -48,7 +51,7 @@
             android:name=".student.fragment.GetCurrentLocation"
             android:exported="true"/>
         <activity
-            android:name=".onboarding.OnBoardingActivity"
+            android:name=".activities.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
