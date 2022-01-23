@@ -21,6 +21,7 @@ import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class WardenActivity : AppCompatActivity() {
     private lateinit var bottomNav: BottomNavigationView
@@ -67,6 +68,7 @@ class WardenActivity : AppCompatActivity() {
                 builder.setMessage("Are you sure you want to logout?").setPositiveButton(
                     "Yes"
                 ) { dialogInterface: DialogInterface?, i: Int ->
+                    FirebaseFirestore.getInstance().collection("fcmTokens").document(FirebaseAuth.getInstance().currentUser!!.uid).delete()
                     FirebaseAuth.getInstance().signOut()
                     val prefs = Prefs(this)
                     prefs.status = 0

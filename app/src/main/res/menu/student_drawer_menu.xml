@@ -17,4 +17,9 @@
         android:id="@+id/studentGrievanceFragment"
         android:icon="@drawable/grievance"
         android:title="@string/grievance" />
+    <item
+        android:id="@+id/studentDashboardFragment"
+        android:icon="@drawable/dashboard_image"
+        android:title="@string/dashboard" />
+
 </menu>
