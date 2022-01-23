@@ -5,5 +5,5 @@
         android:id="@+id/warden_logout"
         android:title="@string/logout"
         android:icon="@drawable/logout_image"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
 </menu>
