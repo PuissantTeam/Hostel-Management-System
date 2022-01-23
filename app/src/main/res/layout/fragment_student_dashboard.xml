@@ -8,7 +8,6 @@
     tools:context=".student.fragment.StudentDashboardFragment">
 
 
-
     <TextView
         android:id="@+id/announcements_text"
         android:layout_width="wrap_content"
@@ -21,13 +20,78 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mess_food_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="@color/celestial"
+        app:cardCornerRadius="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/mess_food_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:text="Today's Food in Mess "
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mess_food_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mess_food_title"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Roti Sabzi "
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/mess_food_extra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mess_food_name"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/mess_food_image"
+                android:text="Do come on time. Food wont be served after 3:30 Pm "
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/mess_food_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/mess_food_title"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/announcements_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/announcements_text"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/mess_food_layout"
         tools:listitem="@layout/student_announcement_recycler_view_item">
 
     </androidx.recyclerview.widget.RecyclerView>

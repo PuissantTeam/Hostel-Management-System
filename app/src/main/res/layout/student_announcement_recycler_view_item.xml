@@ -13,19 +13,19 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="120dp">
 
         <TextView
             android:id="@+id/announcement_sender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10sp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="16dp"
+            android:layout_centerVertical="true"
             android:background="@drawable/round_background"
-            android:backgroundTint="@color/primary_color"
+            android:backgroundTint="@color/white_cario"
             android:gravity="center"
             android:padding="10dp"
+            android:textColor="@color/black"
             tools:text="Admin" />
 
         <TextView
@@ -37,18 +37,21 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="16dp"
             android:layout_toEndOf="@id/announcement_sender"
-
+            android:maxLines="2"
             android:padding="10dp"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/announcements_date"
-            android:layout_width="80dp"
-            android:layout_height="20dp"
-            android:layout_below="@+id/announcements_title"
-            android:layout_marginStart="235dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="22/12/22"
+            android:textColor="@color/black" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

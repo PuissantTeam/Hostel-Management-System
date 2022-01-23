@@ -18,24 +18,10 @@
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/admin_bottom_navigation"
             android:layout_gravity="bottom"
             app:defaultNavHost="true"
             app:layout_behavior=".helper.ScrollingViewWithBottomNavigationBehavior"
             app:navGraph="@navigation/admin_nav_graph" />
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/admin_bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-            android:background="@color/white"
-            app:hideOnScroll="true"
-            app:itemIconTint="@color/black"
-            app:itemTextColor="@color/black"
-            app:labelVisibilityMode="selected"
-            app:menu="@menu/admin_bottom_menu" />
 
     </RelativeLayout>
 

@@ -37,5 +37,8 @@
     <string name="view_leave">View Leave</string>
     <string name="grievance">Grievance</string>
     <string name="notice">Notice</string>
+    <string name="warden">Warden</string>
+    <string name="send_notice">Send Notice</string>
+    <string name="grievances">Grievances</string>
 
 </resources>
