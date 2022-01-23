@@ -10,6 +10,12 @@ import androidx.navigation.findNavController
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.admin.model.AdminNotice
 import com.example.hostelmanagementsystem.databinding.FragmentAdminNoticeBinding
+import com.example.hostelmanagementsystem.databinding.FragmentStudentGrievanceBinding
+import com.example.hostelmanagementsystem.extensions.closeKeyboard
+import com.example.hostelmanagementsystem.extensions.showSnackBar
+import com.example.hostelmanagementsystem.student.model.GrievanceModel
+import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
+
 import com.example.hostelmanagementsystem.extensions.showSnackBar
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
@@ -53,6 +59,7 @@ class AdminNoticeFragment : Fragment() {
 
 
         binding.submitNoticeAdmin.setOnClickListener {
+            closeKeyboard()
             submitNotice(binding.root)
         }
         return binding.root

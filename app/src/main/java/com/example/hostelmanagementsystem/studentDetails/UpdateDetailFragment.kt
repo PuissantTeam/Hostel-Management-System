@@ -10,6 +10,7 @@ import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.FragmentUpdateDetailBinding
+import com.example.hostelmanagementsystem.extensions.closeKeyboard
 import com.example.hostelmanagementsystem.extensions.showSnackBar
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.firestore.FirebaseFirestore
@@ -36,6 +37,7 @@ class UpdateDetailFragment : Fragment() {
                 })
         }
         binding.updateButton.setOnClickListener(View.OnClickListener {
+            closeKeyboard()
             var name = binding.updateName.text.toString().trim()
             var sid = binding.updateSid.text.toString().trim()
             if(name.isEmpty()){
