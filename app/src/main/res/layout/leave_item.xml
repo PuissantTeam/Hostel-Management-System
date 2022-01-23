@@ -13,12 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/profile_image" />
+
         <TextView
             android:id="@+id/leave_reason"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/user_image"
             android:text="Reason"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -29,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/leave_reason"
-            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/user_image"
             android:layout_marginTop="5dp"
             android:text="Start: "
             android:textColor="@color/black"
@@ -41,8 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/leave_start"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/user_image"
             android:layout_marginTop="5dp"
             android:paddingBottom="10dp"
             android:singleLine="true"

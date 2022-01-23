@@ -2,17 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/studentDashboard"
+        android:id="@+id/adminDashboardFragment"
         android:title="@string/dashboard"
         android:icon="@drawable/dashboard_image"/>
     <item
-        android:id="@+id/studentProfileFragment"
-        android:title="@string/profile"
+        android:id="@+id/studentListFragment"
+        android:title="@string/student"
+        android:icon="@drawable/students_image"/>
+
+    <item
+        android:id="@+id/wardenListFragment"
+        android:title="@string/warden"
         android:icon="@drawable/profile_image"/>
     <item
-        android:id="@+id/admin_logout"
-        android:title = "@string/logout"
-        android:icon="@drawable/logout_image"/>
+        android:id="@+id/viewGrievanceFragment"
+        android:title = "@string/grievance"
+        android:icon="@drawable/grievance_image"/>
     <item
         android:id="@+id/adminNoticeFragment"
         android:title="@string/notice"

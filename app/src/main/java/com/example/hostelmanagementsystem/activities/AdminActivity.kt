@@ -19,30 +19,25 @@ import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
 
 
 import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class AdminActivity : AppCompatActivity() {
-    private lateinit var bottomNav: BottomNavigationView
     private lateinit var navController: NavController
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
-    private lateinit var adminNavigationView : NavigationView
-    private lateinit var adminBottomNavigation : BottomNavigationView
+    private lateinit var adminNavigationView: NavigationView
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin)
-        adminBottomNavigation = findViewById(R.id.admin_bottom_navigation)
+
         drawerLayout = findViewById(R.id.drawer_layout)
         adminNavigationView = findViewById(R.id.admin_navigation_view)
 
-        bottomNav = adminBottomNavigation
         navController = findNavController(R.id.admin_host_fragment)
-        setupBottomNavigation()
 
         navigationView = adminNavigationView
         drawerLayout = drawerLayout
@@ -53,17 +48,13 @@ class AdminActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(navigationView, navController)
     }
 
-    private fun setupBottomNavigation() {
-        bottomNav.setupWithNavController(navController)
-    }
-
     override fun onSupportNavigateUp(): Boolean {
         hideSoftKeyboard(this)
         return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.admin_drawer_menu, menu)
+        menuInflater.inflate(R.menu.admin, menu)
         return true
     }
 
@@ -78,7 +69,7 @@ class AdminActivity : AppCompatActivity() {
                     FirebaseAuth.getInstance().signOut()
                     val prefs = Prefs(this)
                     prefs.status = 0
-                    prefs.userType= "none"
+                    prefs.userType = "none"
                     val intent = Intent(this, OnBoardingActivity::class.java)
                     startActivity(intent)
                     finish()

@@ -10,15 +10,22 @@
     android:backgroundTint="@color/primary_color"
     android:padding="10dp">
 
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/profile_image" />
     <TextView
         android:id="@+id/student_item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/user_image"
         android:text="Name"
         android:textSize="16sp"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
@@ -26,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/student_item_name"
+        android:layout_toEndOf="@id/user_image"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:text="Room No"

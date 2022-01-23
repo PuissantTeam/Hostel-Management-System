@@ -14,8 +14,6 @@
         android:layout_centerInParent="true"
         android:visibility="invisible"/>
 
-
-    <!-- TODO: Update blank fragment layout -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/student_admin_recycler"
         android:layout_width="match_parent"

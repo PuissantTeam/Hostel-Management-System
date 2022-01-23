@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/studentDashboard"
-        android:title="@string/dashboard"
-        android:icon="@drawable/dashboard_image"/>
+        android:id="@+id/studentDashboardFragment"
+        android:icon="@drawable/dashboard_image"
+        android:title="@string/dashboard" />
     <item
         android:id="@+id/studentProfileFragment"
         android:title="@string/profile"
@@ -17,9 +17,6 @@
         android:id="@+id/studentGrievanceFragment"
         android:icon="@drawable/grievance"
         android:title="@string/grievance" />
-    <item
-        android:id="@+id/studentDashboardFragment"
-        android:icon="@drawable/dashboard_image"
-        android:title="@string/dashboard" />
+
 
 </menu>

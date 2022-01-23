@@ -31,10 +31,10 @@ class StudentFragmentAdapter(options: FirestoreRecyclerOptions<Student>) :
         model: Student
     ) {
             holder.name.text = model.name
-            holder.room.text = model.roomNo
-        holder.layout.setOnClickListener(View.OnClickListener {
+            holder.room.text = "Room No: ${model.roomNo}"
+        holder.layout.setOnClickListener {
             listener!!.onItemClick(snapshots.getSnapshot(position).id)
-        })
+        }
     }
 
     class StudentHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
