@@ -10,6 +10,7 @@ import androidx.navigation.findNavController
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.student.model.LeaveModel
 import com.example.hostelmanagementsystem.databinding.FragmentStudentLeaveBinding
+import com.example.hostelmanagementsystem.extensions.closeKeyboard
 import com.example.hostelmanagementsystem.extensions.showSnackBar
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
@@ -73,6 +74,7 @@ class StudentLeaveFragment : Fragment() {
             d.show()
         }
         binding.submitStudentLeave.setOnClickListener {
+            closeKeyboard()
             submitLeave(binding.root)
         }
         return binding.root

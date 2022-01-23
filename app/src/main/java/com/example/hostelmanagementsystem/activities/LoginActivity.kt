@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import com.example.hostelmanagementsystem.common.data.Prefs
 import com.example.hostelmanagementsystem.databinding.ActivityLoginBinding
+import com.example.hostelmanagementsystem.extensions.hideKeyboard
 import com.example.hostelmanagementsystem.extensions.showSnackBar
 import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.gms.tasks.OnCompleteListener
@@ -24,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         binding.register.setOnClickListener(View.OnClickListener {
+            hideKeyboard(view)
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
             finish()

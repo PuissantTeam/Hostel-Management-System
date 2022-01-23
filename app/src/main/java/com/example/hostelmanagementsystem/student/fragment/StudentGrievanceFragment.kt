@@ -8,13 +8,14 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.FragmentStudentGrievanceBinding
+import com.example.hostelmanagementsystem.extensions.closeKeyboard
 import com.example.hostelmanagementsystem.extensions.showSnackBar
 import com.example.hostelmanagementsystem.student.model.GrievanceModel
+import com.example.hostelmanagementsystem.utils.hideSoftKeyboard
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
-import java.util.*
 
 
 class StudentGrievanceFragment : Fragment() {
@@ -34,6 +35,7 @@ class StudentGrievanceFragment : Fragment() {
 
 
         binding.submitStudentGrievance.setOnClickListener {
+            closeKeyboard()
             submitGrievance(binding.root)
         }
         return binding.root

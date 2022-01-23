@@ -12,7 +12,7 @@
     <fragment
         android:id="@+id/adminNoticeFragment"
         android:name="com.example.hostelmanagementsystem.admin.fragment.AdminNoticeFragment"
-        android:label="fragment_admin_notice"
+        android:label="Notice"
         tools:layout="@layout/fragment_admin_notice" />
     <fragment
         android:id="@+id/studentListFragment"
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/studentDetailFragment"
         android:name="com.example.hostelmanagementsystem.studentDetails.StudentDetailFragment"
-        android:label="fragment_student_detail"
+        android:label="Student Details"
         tools:layout="@layout/fragment_student_detail" >
         <action
             android:id="@+id/action_studentDetailFragment_to_updateDetailFragment"
@@ -43,7 +43,7 @@
     <fragment
         android:id="@+id/updateDetailFragment"
         android:name="com.example.hostelmanagementsystem.studentDetails.UpdateDetailFragment"
-        android:label="fragment_update_detail"
+        android:label="Update Details"
         tools:layout="@layout/fragment_update_detail" >
         <action
             android:id="@+id/action_updateDetailFragment_to_studentDetailFragment"

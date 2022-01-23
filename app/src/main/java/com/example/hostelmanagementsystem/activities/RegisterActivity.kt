@@ -17,6 +17,7 @@ import com.example.hostelmanagementsystem.R
 import com.example.hostelmanagementsystem.databinding.ActivityRegisterBinding
 import com.example.hostelmanagementsystem.extensions.showSnackBar
 import com.example.hostelmanagementsystem.common.model.Register
+import com.example.hostelmanagementsystem.extensions.hideKeyboard
 import com.example.hostelmanagementsystem.onboarding.OnBoardingActivity
 import com.example.hostelmanagementsystem.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
@@ -80,6 +81,7 @@ class RegisterActivity : AppCompatActivity() {
         requestOueue = Volley.newRequestQueue(this)
         stateJsonParse()
         binding.RegisterBtnRegister.setOnClickListener(View.OnClickListener {
+            hideKeyboard(view)
             registerUser(view)
         })
         setContentView(view)
