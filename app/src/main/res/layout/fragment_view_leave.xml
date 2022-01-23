@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/primary_background"
     tools:context=".warden.fragment.AllocationFragment">
 
     <TextView
@@ -27,6 +28,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/text_view_application"
         android:layout_marginBottom="0dp"
-        android:background="@android:color/transparent" />
+        android:background="@android:color/transparent"
+        tools:listitem="@layout/leave_item" />
 
 </RelativeLayout>

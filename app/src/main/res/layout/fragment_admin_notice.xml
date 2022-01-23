@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/primary_background"
     tools:context=".admin.fragment.AdminNoticeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/admin_notice"
         android:layout_width="200dp"
@@ -64,12 +64,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/primary_color"
+        android:backgroundTint="@color/blue_Dark"
         android:paddingVertical="15dp"
         android:text="SUBMIT NOTICE"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textColor="@color/white_cario"
+        android:textSize="16sp" />
     <RelativeLayout
         android:id="@+id/fake_anchor_layout"
         android:layout_width="match_parent"

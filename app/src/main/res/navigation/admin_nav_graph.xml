@@ -49,4 +49,10 @@
             android:id="@+id/action_updateDetailFragment_to_studentDetailFragment"
             app:destination="@id/studentDetailFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/viewGrievanceFragment"
+        android:name="com.example.hostelmanagementsystem.warden.fragment.ViewGrievanceFragment"
+        android:label="ViewGrievanceFragment"
+        tools:layout="@layout/fragment_view_grievance" />
 </navigation>

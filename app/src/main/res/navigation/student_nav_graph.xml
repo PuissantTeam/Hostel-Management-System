@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/student_navigation"
     android:label="Send Grievance"
-    app:startDestination="@id/studentDashboard">
+    app:startDestination="@id/studentDashboardFragment">
 
     <fragment
-        android:id="@+id/studentDashboard"
+        android:id="@+id/studentDashboardFragment"
         android:name="com.example.hostelmanagementsystem.student.fragment.StudentDashboardFragment"
-        android:label="Announcements"
+        android:label="Dashboard "
         tools:layout="@layout/fragment_student_dashboard" />
 
     <fragment

@@ -15,15 +15,25 @@ class AdminDashboardFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         adminDashboardBinding = FragmentAdminDashboardBinding.inflate(layoutInflater)
         val rootView = adminDashboardBinding.root
-        adminDashboardBinding.studentsLayout.setOnClickListener{
+
+        adminDashboardBinding.studentsViewCard.setOnClickListener{
             view?.findNavController()?.navigate(R.id.studentListFragment)
         }
-        adminDashboardBinding.wardenLayout.setOnClickListener{
+
+        adminDashboardBinding.wardenViewCard.setOnClickListener{
             view?.findNavController()?.navigate(R.id.wardenListFragment)
+        }
+
+        adminDashboardBinding.sendNoticeCard.setOnClickListener{
+            view?.findNavController()?.navigate(R.id.adminNoticeFragment)
+        }
+
+        adminDashboardBinding.grievancesViewCard.setOnClickListener{
+            view?.findNavController()?.navigate(R.id.viewGrievanceFragment)
         }
 
         return rootView

@@ -17,7 +17,7 @@
         android:title="@string/grievance"
         android:icon="@drawable/grievance_image"/>
     <item
-        android:id="@+id/adminNoticeFragment2"
+        android:id="@+id/adminNoticeFragment"
         android:title="@string/notice"
         android:icon="@drawable/notice_image"/>
 </menu>
