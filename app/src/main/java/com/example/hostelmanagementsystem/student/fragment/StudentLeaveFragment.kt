@@ -33,7 +33,7 @@ class StudentLeaveFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentStudentLeaveBinding.inflate(inflater, container, false)
-        status = "pending"
+        status = "0"
 
         binding.startdateLeave.setOnClickListener {
             val dpd =
@@ -105,7 +105,7 @@ class StudentLeaveFragment : Fragment() {
                         val name = result.getString("name").toString()
                         val sid =  result.getString("sid").toString()
                         val roomNo = result.getString("roomNo").toString()
-                        val leaveModel = LeaveModel(startDate, endDate, reason, status, name, sid, roomNo)
+                        val leaveModel = LeaveModel(startDate, endDate, reason, status, name, sid, roomNo, user.uid)
                         leaveRef.add(leaveModel)
                             .addOnSuccessListener {
                     showSnackBar(requireActivity(), "Your leave application has been sent to the warden",binding.fakeAnchorLayout)
